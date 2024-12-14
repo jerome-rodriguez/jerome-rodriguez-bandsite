@@ -1,3 +1,7 @@
+@use "variables" as *;
+
+// repsonsive design breakpoints
+
 @mixin mobile {
     @media (max-width: 320px) {
         @content;
@@ -16,17 +20,48 @@
     }
 }
 
-@mixin padding-components($padding) {
-    padding: $padding;
+// padding
+
+@mixin padding-sides($padding) {
+    padding: 0%;
+    padding-left: $padding;
+    padding-right: $padding;
 }
 
-@mixin padding-headline($head-padding) {
-    @include padding-components($padding);
-    padding-top: $head-padding;
+@mixin padding-component($top, $sides) {
+    padding: $sides;
+    padding-top: $top;
 }
+
+// text style
 
 @mixin text-style($size, $height, $weight) {
     font-size: $size;
     line-height: $height;
     font-weight: $weight;
+}
+
+// call to actions
+
+@mixin button {
+    height: 40px;
+    border-radius: 4px; // double check if this is what style guide asks
+
+    @include desktop {
+        width: 150px;
+        padding:0%;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @include tablet {
+        width: 150px;
+        padding:0%;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @include mobile {
+        width: 100%;
+    }
 }
