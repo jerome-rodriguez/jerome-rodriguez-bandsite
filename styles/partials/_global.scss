@@ -1,0 +1,11 @@
+@use "fonts" as *;
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "NunitoSans", Arial, Helvetica, sans-serif;
+}
