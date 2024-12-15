@@ -9,29 +9,62 @@
     @include mobile {
         @include padding-component($mobile-padding-sides, 0px);
     }
+
+    @include tablet {
+        padding: 0%;
+    }
 }
 
 .nav {
 
+    @include tablet {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__logo-link {
+
+        @include tablet {
+            padding: $dt-padding-sides;
+        }
+    }
+
     &__logo-img {
         height: 20px;
         width: 120px;
-        display: flex;
-        justify-self: center;
+
+        @include mobile {
+            display: flex;
+            justify-self: center;
+        }
     }
     
     &__list {
         list-style-type: none;
-        padding-top: $mobile-padding-sides;
         display: flex;
-        justify-content: space-around;
+
+        @include mobile {
+
+            padding-top: $mobile-padding-sides;
+            justify-content: space-around;
+        }
     
+        @include tablet {
+            justify-content: flex-start;
+        }
     
         &-item {
-            text-align: center;
-            width: 100%;
-            padding-bottom: $mobile-padding-sides;
-    
+
+            @include mobile {
+                text-align: center;
+                width: 100%;
+                padding-bottom: $mobile-padding-sides;
+            }
+
+            @include tablet {
+                padding: $dt-padding-sides;
+            }
+            
             &:active {
                 color: $white;
                 border-bottom: 4px solid $white;
@@ -49,12 +82,20 @@
         &-link {
             color: $mercury;
             text-decoration: none;
+
+            @include mobile {
+                @include text-style(13px, 18px, 400);
+            }
+
+            @include tablet {
+                @include text-style(14px, 22px, 400);
+            }
     
             &:active { 
                 color: $white;
                 font-weight: 700;
             }
-            
+
             &:hover {
                 color: $white;
         
@@ -76,13 +117,23 @@
         @include padding-sides($mobile-padding-sides);
     }
 
+    @include tablet {
+        @include padding-sides($dt-padding-sides); 
+    }
+
     &__title {
         color: white;
-        padding-top: 80px;
-        padding-bottom: 80px;
 
         @include mobile {
             @include text-style(24px, 32px, 700);
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        @include tablet {
+            @include text-style(60px, 68px, 700);
+            padding-top: 180px;
+            padding-bottom: 180px;
         }
     }
 }
@@ -96,37 +147,107 @@
             @include text-style(24px, 32px, 700);
             @include padding-component($mobile-padding-top, $mobile-padding-sides);
         }
+
+        @include tablet {
+            @include text-style(36px, 44px, 700);
+            @include padding-component($dt-padding-top, $dt-padding-sides);
+        }
     }
     
     &__img {
-        width: 100%;
-        height: auto;
-        @include padding-component(0px, $mobile-padding-sides);
+
+        @include mobile {
+            width: 100%;
+            height: auto;
+            @include padding-component(0px, $mobile-padding-sides);
+        }
+
+        @include tablet {
+            width: 100%;
+            height: auto;
+            @include padding-sides(100px);
+            padding-bottom: $dt-padding-sides;
+        }
     }
     
     &__quote {
         color: $bandsite-black;
-        @include text-style(14px, 22px, 600);
-        @include padding-sides($mobile-padding-sides);
+
+        @include mobile {
+
+            @include text-style(14px, 22px, 600);
+            @include padding-sides($mobile-padding-sides);
+        }
+        
+        @include tablet {
+
+            @include text-style(24px, 32px, 700);
+            @include padding-sides(100px);
+        }
+
     }
     
     &__quote-source {
         color: $bandsite-black;
-        @include text-style(14px, 22px, 600);
-        @include padding-component(0px, $mobile-padding-sides);
+
+        @include mobile {
+
+            @include text-style(14px, 22px, 600);
+            @include padding-component(0px, $mobile-padding-sides);
+        }
+    
+
+        @include tablet {
+
+            @include text-style(14px, 22px, 700);
+            @include padding-sides(100px);
+            padding-top: 8px;
+        }
     }
     
     &__band-name {
         color: $bandsite-darkblack;
-        @include text-style(13px, 18px, 400);
-        @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-        padding-bottom: 0%;
+
+        @include mobile {
+
+            @include text-style(13px, 18px, 400);
+            @include padding-component($mobile-padding-sides, $mobile-padding-sides);
+            padding-bottom: 0%;
+        }
+
+        @include tablet {
+            @include text-style(24px, 32px, 500);
+            @include padding-sides(100px);
+            padding-top: $dt-padding-top;
+            padding-bottom: $dt-padding-sides;
+        }
+        
     }
     
     &__band-bio {
         color: $bandsite-black;
-        @include text-style(13px, 18px, 400);
-        @include padding-component($mobile-padding-sides, $mobile-padding-sides);
+
+        @include mobile {
+            @include text-style(13px, 18px, 400);
+            @include padding-component($mobile-padding-sides, $mobile-padding-sides);
+        }
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+
+            @include text-style(14px, 22px, 400);
+            @include padding-sides(100px);
+
+            padding-bottom: $dt-padding-sides;
+        }
+        
+        &-left {
+
+            @include tablet {
+                padding-right: 64px;
+            }
+        }
     }
 }
 
@@ -135,18 +256,46 @@
 
     &__title {
         color: $bandsite-black;
-        @include text-style(24px, 32px, 700);
-        @include padding-component($mobile-padding-top, $mobile-padding-sides);
+
+        @include mobile {
+            @include text-style(24px, 32px, 700);
+            @include padding-component($mobile-padding-top, $mobile-padding-sides);
+        }
+
+        @include tablet {
+            @include text-style(36px, 44px, 700);
+            @include padding-component($dt-padding-top, $dt-padding-sides);
+        }
     }
-    
-    &__card {
-        @include padding-component(0px, $mobile-padding-sides);
+
+    &__grid {
+
+        @include tablet {
+
+            @include padding-component(0px, $dt-padding-sides);
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
     }
     
     &__card-img {
-        display: block;
-        width: 100%;
-        height: auto;
+
+        @include mobile {
+
+            @include padding-component(0px, $mobile-padding-sides);
+
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        @include tablet {
+            width: 100%;
+            height: auto;
+        }
+
         filter: grayscale(100%);
     
         &:hover {
@@ -159,43 +308,161 @@
     background-color: $bandsite-black;
     color: $white;
 
-    &__title {
-        @include text-style(24px, 32px, 700);
-        @include padding-component($mobile-padding-top, $mobile-padding-sides);
+    &__heading {
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            @include padding-component($dt-padding-top, $dt-padding-sides);
+        }
+
+        &-left {
+            
+            @include tablet {
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+        &-title {
+
+            @include mobile {
+                @include text-style(24px, 32px, 700);
+                @include padding-component($mobile-padding-top, $mobile-padding-sides); 
+            }
+    
+            @include tablet {
+                @include text-style(36px, 44px, 700);
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+        }
+
+        &-logo {
+
+            @include mobile {
+                @include padding-sides($mobile-padding-sides);
+            }
+
+            @include tablet {
+                @include padding-sides($dt-padding-sides);
+            }
+
+            &--facebook {
+
+                @include tablet {
+                    padding: 0%;
+                }
+            }
+        }
+
+        &-band {
+
+            @include mobile {
+                display: none;
+            }
+
+            @include tablet {
+                height: 20px;
+                width: 120px;
+            }
+        }
+
     }
     
-    &__logo {
-        @include padding-sides($mobile-padding-sides)
-    }
-    
-    &__link {
-        text-decoration: none;
-    }
-    
-    &__brand-name {
-        @include text-style(14px, 22px, 600);
-        @include padding-component($mobile-padding-sides, $mobile-padding-sides)
-    }
-    
-    &__brand-address {
-        @include text-style(13px, 18px, 400);
-        @include padding-component(0px, $mobile-padding-sides)
-    }
-    
-    &__brand-email {
-        text-decoration: none;
-        color: $white;
-        @include text-style(13px, 18px, 400);
-        @include padding-component(0px, $mobile-padding-sides);
-        display: block;
+    &__brand {
+
+        @include tablet {
+
+            @include text-style(14px, 20px, 400);
+
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        &-info {
+
+            @include mobile {
+                padding-bottom: $mobile-padding-sides;
+            }
+
+            &-name {
+
+                @include mobile {
+                    @include text-style(14px, 22px, 600);
+                    @include padding-component($mobile-padding-sides, $mobile-padding-sides);
+                }
+
+                @include tablet {
+                    font-weight: 700;
+                    @include padding-component(0px, $dt-padding-sides);
+                }
+            }
+
+            &-address {
+
+                @include mobile {
+                    @include text-style(13px, 18px, 400);
+                    @include padding-component(0px, $mobile-padding-sides);
+                }
+
+                @include tablet {
+                    @include padding-component(0px, $dt-padding-sides);
+                }
+
+            }
+
+            &-email {
+
+                text-decoration: none;
+                color: $white;
+
+                @include mobile {
+                    @include text-style(13px, 18px, 400);
+                    @include padding-component(0px, $mobile-padding-sides);
+                }
+
+                @include tablet {
+                    @include padding-component(0px, $dt-padding-sides);
+                }
+
+            }
+
+        }
+
     }
     
     &__band-logo {
-        @include padding-component(calc($mobile-padding-top*2), $mobile-padding-sides);
+
+        @include mobile {
+            @include padding-component(calc($mobile-padding-top*2), $mobile-padding-sides);
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        @include desktop {
+            display: none;
+        }
     }
     
     &__copyright {
-        @include text-style(13px, 18px, 400);
-        @include padding-component(0px, $mobile-padding-sides);
+
+        @include mobile {
+            @include text-style(13px, 18px, 400);
+            @include padding-component(0px, $mobile-padding-sides);
+        }
+
+        @include tablet {
+            @include text-style(14px, 20px, 400);
+            @include padding-component(calc($dt-padding-sides*2), $dt-padding-sides);
+        }
     }
 }
