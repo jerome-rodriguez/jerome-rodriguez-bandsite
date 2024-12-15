@@ -42,27 +42,36 @@ body {
   display: flex;
   justify-self: center;
 }
-
 .nav__list {
   list-style-type: none;
   padding-top: 16px;
   display: flex;
   justify-content: space-around;
 }
-
 .nav__list-item {
   text-align: center;
   width: 100%;
   padding-bottom: 16px;
 }
+.nav__list-item:active {
+  color: #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+  font-weight: 700;
+}
 .nav__list-item:hover {
   color: #FFFFFF;
   border-bottom: 4px solid #FFFFFF;
 }
-
 .nav__list-link {
   color: #E1E1E1;
   text-decoration: none;
+}
+.nav__list-link:active {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+.nav__list-link:hover {
+  color: #FFFFFF;
 }
 
 .cover {
@@ -81,7 +90,6 @@ body {
     padding-right: 16px;
   }
 }
-
 .cover__title {
   color: white;
   padding-top: 80px;
@@ -107,14 +115,12 @@ body {
     padding-top: 24px;
   }
 }
-
 .about__img {
   width: 100%;
   height: auto;
   padding: 16px;
   padding-top: 0px;
 }
-
 .about__quote {
   color: #323232;
   font-size: 14px;
@@ -124,7 +130,6 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
-
 .about__quote-source {
   color: #323232;
   font-size: 14px;
@@ -133,7 +138,6 @@ body {
   padding: 16px;
   padding-top: 0px;
 }
-
 .about__band-name {
   color: #000000;
   font-size: 13px;
@@ -143,7 +147,6 @@ body {
   padding-top: 16px;
   padding-bottom: 0%;
 }
-
 .about__band-bio {
   color: #323232;
   font-size: 13px;
@@ -156,7 +159,6 @@ body {
 .photos {
   background-color: #FAFAFA;
 }
-
 .photos__title {
   color: #323232;
   font-size: 24px;
@@ -165,23 +167,24 @@ body {
   padding: 16px;
   padding-top: 24px;
 }
-
-.photo__card {
+.photos__card {
   padding: 16px;
   padding-top: 0px;
 }
-
-.photo__card-img {
+.photos__card-img {
   display: block;
   width: 100%;
   height: auto;
+  filter: grayscale(100%);
+}
+.photos__card-img:hover {
+  filter: grayscale(0%);
 }
 
 .contact {
   background-color: #323232;
   color: #FFFFFF;
 }
-
 .contact__title {
   font-size: 24px;
   line-height: 32px;
@@ -189,17 +192,14 @@ body {
   padding: 16px;
   padding-top: 24px;
 }
-
 .contact__logo {
   padding: 0%;
   padding-left: 16px;
   padding-right: 16px;
 }
-
 .contact__link {
   text-decoration: none;
 }
-
 .contact__brand-name {
   font-size: 14px;
   line-height: 22px;
@@ -207,7 +207,6 @@ body {
   padding: 16px;
   padding-top: 16px;
 }
-
 .contact__brand-address {
   font-size: 13px;
   line-height: 18px;
@@ -215,7 +214,6 @@ body {
   padding: 16px;
   padding-top: 0px;
 }
-
 .contact__brand-email {
   text-decoration: none;
   color: #FFFFFF;
@@ -226,12 +224,10 @@ body {
   padding-top: 0px;
   display: block;
 }
-
 .contact__band-logo {
   padding: 16px;
   padding-top: 48px;
 }
-
 .contact__copyright {
   font-size: 13px;
   line-height: 18px;
