@@ -32,7 +32,7 @@ body {
 @media (max-width: 320px) {
   .header {
     padding: 0px;
-    padding-top: 16px;
+    padding-top: 1rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
@@ -60,18 +60,18 @@ body {
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .nav__logo-link {
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 @media (min-width: 1920px) {
   .nav__logo-link {
-    padding: 36px;
-    padding-left: 128px;
+    padding: 2.25rem;
+    padding-left: 8rem;
   }
 }
 .nav__logo-img {
-  height: 20px;
-  width: 120px;
+  height: 1.25rem;
+  width: 7.5rem;
 }
 @media (max-width: 320px) {
   .nav__logo-img {
@@ -85,7 +85,7 @@ body {
 }
 @media (max-width: 320px) {
   .nav__list {
-    padding-top: 16px;
+    padding-top: 1rem;
     justify-content: space-around;
   }
 }
@@ -103,32 +103,27 @@ body {
   .nav__list-item {
     text-align: center;
     width: 100%;
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .nav__list-item {
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 @media (min-width: 1920px) {
   .nav__list-item {
-    padding: 36px;
-  }
-}
-@media (min-width: 1920px) {
-  .nav__list-item-2 {
-    padding-left: 0%;
+    padding: 2.25rem;
   }
 }
 .nav__list-item:active {
   color: #FFFFFF;
-  border-bottom: 4px solid #FFFFFF;
+  border-bottom: 0.25rem solid #FFFFFF;
   font-weight: 700;
 }
 .nav__list-item:hover {
   color: #FFFFFF;
-  border-bottom: 4px solid #FFFFFF;
+  border-bottom: 0.25rem solid #FFFFFF;
 }
 .nav__list-link {
   color: #E1E1E1;
@@ -136,22 +131,22 @@ body {
 }
 @media (max-width: 320px) {
   .nav__list-link {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 400;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .nav__list-link {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
   }
 }
 @media (min-width: 1920px) {
   .nav__list-link {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
   }
 }
@@ -175,22 +170,22 @@ body {
 @media (max-width: 320px) {
   .cover {
     padding: 0%;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .cover {
     padding: 0%;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 @media (min-width: 1920px) {
   .cover {
     padding: 0%;
-    padding-left: 128px;
-    padding-right: 128px;
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 }
 .cover__title {
@@ -198,29 +193,29 @@ body {
 }
 @media (max-width: 320px) {
   .cover__title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .cover__title {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-weight: 700;
-    padding-top: 180px;
-    padding-bottom: 180px;
+    padding-top: 11.25rem;
+    padding-bottom: 11.25rem;
   }
 }
 @media (min-width: 1920px) {
   .cover__title {
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-weight: 700;
-    padding-top: 560px;
-    padding-bottom: 560px;
+    padding-top: 35rem;
+    padding-bottom: 35rem;
   }
 }
 
@@ -229,37 +224,37 @@ body {
 }
 @media (max-width: 320px) {
   .about__title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
-    padding: 16px;
-    padding-top: 24px;
+    padding: 1rem;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .about__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    padding: 36px;
-    padding-top: 48px;
+    padding: 2.25rem;
+    padding-top: 3rem;
   }
 }
 @media (min-width: 1920px) {
   .about__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    padding: 128px;
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (max-width: 320px) {
   .about__img {
     width: 100%;
     height: auto;
-    padding: 16px;
+    padding: 1rem;
     padding-top: 0px;
   }
 }
@@ -268,9 +263,9 @@ body {
     width: 100%;
     height: auto;
     padding: 0%;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 36px;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (min-width: 1920px) {
@@ -278,9 +273,9 @@ body {
     width: 100%;
     height: auto;
     padding: 0%;
-    padding-left: 228px;
-    padding-right: 228px;
-    padding-bottom: 36px;
+    padding-left: 14.25rem;
+    padding-right: 14.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 .about__quote {
@@ -288,32 +283,32 @@ body {
 }
 @media (max-width: 320px) {
   .about__quote {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 600;
     padding: 0%;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .about__quote {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
     padding: 0%;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
   }
 }
 @media (min-width: 1920px) {
   .about__quote {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
     padding: 0%;
-    padding-left: 228px;
-    padding-right: 228px;
+    padding-left: 14.25rem;
+    padding-right: 14.25rem;
   }
 }
 .about__quote-source {
@@ -321,33 +316,33 @@ body {
 }
 @media (max-width: 320px) {
   .about__quote-source {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 600;
-    padding: 16px;
+    padding: 1rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .about__quote-source {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 700;
     padding: 0%;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 8px;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-top: 0.5rem;
   }
 }
 @media (min-width: 1920px) {
   .about__quote-source {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 700;
     padding: 0%;
-    padding-left: 228px;
-    padding-right: 228px;
-    padding-top: 16px;
+    padding-left: 14.25rem;
+    padding-right: 14.25rem;
+    padding-top: 1rem;
   }
 }
 .about__band-name {
@@ -355,36 +350,36 @@ body {
 }
 @media (max-width: 320px) {
   .about__band-name {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 400;
-    padding: 16px;
-    padding-top: 16px;
+    padding: 1rem;
+    padding-top: 1rem;
     padding-bottom: 0%;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .about__band-name {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 500;
     padding: 0%;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (min-width: 1920px) {
   .about__band-name {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 500;
     padding: 0%;
-    padding-left: 228px;
-    padding-right: 228px;
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding-left: 14.25rem;
+    padding-right: 14.25rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
   }
 }
 .about__band-bio {
@@ -392,8 +387,8 @@ body {
 }
 @media (max-width: 320px) {
   .about__band-bio {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 400;
   }
 }
@@ -401,48 +396,48 @@ body {
   .about__band-bio {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
     padding: 0%;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 36px;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (min-width: 1920px) {
   .about__band-bio {
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
     padding: 0%;
-    padding-left: 228px;
-    padding-right: 228px;
-    padding-bottom: 36px;
+    padding-left: 14.25rem;
+    padding-right: 14.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (max-width: 320px) {
   .about__band-bio-left {
-    padding: 16px;
-    padding-top: 16px;
+    padding: 1rem;
+    padding-top: 1rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .about__band-bio-left {
-    padding-right: 64px;
+    padding-right: 4rem;
   }
 }
 @media (min-width: 1920px) {
   .about__band-bio-left {
-    padding-right: 24px;
+    padding-right: 1.5rem;
   }
 }
 @media (max-width: 320px) {
   .about__band-bio-right {
-    padding: 16px;
-    padding-top: 16px;
+    padding: 1rem;
+    padding-top: 1rem;
   }
 }
 
@@ -454,49 +449,49 @@ body {
 }
 @media (max-width: 320px) {
   .photos__title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
-    padding: 16px;
-    padding-top: 24px;
+    padding: 1rem;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .photos__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    padding: 36px;
-    padding-top: 48px;
+    padding: 2.25rem;
+    padding-top: 3rem;
   }
 }
 @media (min-width: 1920px) {
   .photos__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    padding: 128px;
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .photos__grid {
-    padding: 36px;
+    padding: 2.25rem;
     padding-top: 0px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 1.5rem;
   }
 }
 @media (min-width: 1920px) {
   .photos__grid {
-    padding: 128px;
+    padding: 8rem;
     padding-top: 0px;
-    padding-bottom: 36px;
+    padding-bottom: 2.25rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 1.5rem;
   }
 }
 .photos__card-img {
@@ -504,7 +499,7 @@ body {
 }
 @media (max-width: 320px) {
   .photos__card-img {
-    padding: 16px;
+    padding: 1rem;
     padding-top: 0px;
     display: block;
     width: 100%;
@@ -536,8 +531,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 36px;
-    padding-top: 48px;
+    padding: 2.25rem;
+    padding-top: 3rem;
   }
 }
 @media (min-width: 1920px) {
@@ -545,9 +540,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 128px;
-    padding-top: 48px;
-    padding-bottom: 36px;
+    padding: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
@@ -564,24 +559,24 @@ body {
 }
 @media (max-width: 320px) {
   .contact__heading-title {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
-    padding: 16px;
-    padding-top: 24px;
+    padding: 1rem;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__heading-title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
   }
 }
 @media (min-width: 1920px) {
   .contact__heading-title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
   }
 }
@@ -591,22 +586,22 @@ body {
 @media (max-width: 320px) {
   .contact__heading-logo {
     padding: 0%;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__heading-logo {
     padding: 0%;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 @media (min-width: 1920px) {
   .contact__heading-logo {
     padding: 0%;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
@@ -626,20 +621,20 @@ body {
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__heading-band {
-    height: 20px;
-    width: 120px;
+    height: 1.25rem;
+    width: 7.5rem;
   }
 }
 @media (min-width: 1920px) {
   .contact__heading-band {
-    height: 20px;
-    width: 120px;
+    height: 1.25rem;
+    width: 7.5rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__brand {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
@@ -647,8 +642,8 @@ body {
 }
 @media (min-width: 1920px) {
   .contact__brand {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 400;
     display: flex;
     justify-content: flex-start;
@@ -656,61 +651,61 @@ body {
 }
 @media (max-width: 320px) {
   .contact__brand-info {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
   }
 }
 @media (max-width: 320px) {
   .contact__brand-info-name {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 600;
-    padding: 16px;
-    padding-top: 16px;
+    padding: 1rem;
+    padding-top: 1rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__brand-info-name {
     font-weight: 700;
-    padding: 36px;
+    padding: 2.25rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 1920px) {
   .contact__brand-info-name {
     font-weight: 700;
-    padding: 36px;
+    padding: 2.25rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 1920px) {
   .contact__brand-info-name-1 {
-    padding-left: 128px;
+    padding-left: 8rem;
   }
 }
 @media (max-width: 320px) {
   .contact__brand-info-address {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 400;
-    padding: 16px;
+    padding: 1rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__brand-info-address {
-    padding: 36px;
+    padding: 2.25rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 1920px) {
   .contact__brand-info-address {
-    padding: 36px;
+    padding: 2.25rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 1920px) {
   .contact__brand-info-address-1 {
-    padding-left: 128px;
+    padding-left: 8rem;
   }
 }
 .contact__brand-info-email {
@@ -719,34 +714,34 @@ body {
 }
 @media (max-width: 320px) {
   .contact__brand-info-email {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 400;
-    padding: 16px;
+    padding: 1rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__brand-info-email {
-    padding: 36px;
+    padding: 2.25rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 1920px) {
   .contact__brand-info-email {
-    padding: 36px;
+    padding: 2.25rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 1920px) {
   .contact__brand-info-email-1 {
-    padding-left: 128px;
+    padding-left: 8rem;
   }
 }
 @media (max-width: 320px) {
   .contact__band-logo {
-    padding: 16px;
-    padding-top: 48px;
+    padding: 1rem;
+    padding-top: 3rem;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
@@ -761,29 +756,29 @@ body {
 }
 @media (max-width: 320px) {
   .contact__copyright {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
     font-weight: 400;
-    padding: 16px;
+    padding: 1rem;
     padding-top: 0px;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__copyright {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 400;
-    padding: 36px;
-    padding-top: 72px;
+    padding: 2.25rem;
+    padding-top: 4.5rem;
   }
 }
 @media (min-width: 1920px) {
   .contact__copyright {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 400;
-    padding: 36px;
-    padding-top: 72px;
-    padding-left: 128px;
+    padding: 2.25rem;
+    padding-top: 4.5rem;
+    padding-left: 8rem;
   }
 }/*# sourceMappingURL=bio.css.map */

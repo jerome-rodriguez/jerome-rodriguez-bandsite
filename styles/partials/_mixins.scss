@@ -44,18 +44,18 @@
 // call to actions
 
 @mixin button {
-    height: 40px;
-    border-radius: 4px; // double check if this is what style guide asks
+    height: 2.5rem;
+    border-radius: 0.25rem; // double check if this is what is meant in style guide
 
     @include desktop {
-        width: 150px;
+        width: 9.375rem;
         padding:0%;
-        padding-left: 32px;
-        padding-right: 32px;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     @include tablet {
-        width: 150px;
+        width: 9.375rem;
         padding:0%;
         padding-left: 32px;
         padding-right: 32px;
