@@ -13,6 +13,10 @@
     @include tablet {
         padding: 0%;
     }
+
+    @include desktop {
+        padding: 0%;
+    }
 }
 
 .nav {
@@ -22,10 +26,20 @@
         justify-content: flex-start;
     }
 
+    @include desktop {
+        display: flex;
+        justify-content: flex-start;
+    }
+
     &__logo-link {
 
         @include tablet {
             padding: $dt-padding-sides;
+        }
+
+        @include desktop {
+            padding: $dt-padding-sides;
+            padding-left: $desktop-padding-sides;
         }
     }
 
@@ -52,6 +66,10 @@
         @include tablet {
             justify-content: flex-start;
         }
+
+        @include desktop {
+            justify-content: flex-start;
+        }
     
         &-item {
 
@@ -63,6 +81,18 @@
 
             @include tablet {
                 padding: $dt-padding-sides;
+            }
+
+            @include desktop {
+                padding: $dt-padding-sides;
+            }
+
+            &-2 {
+
+                @include desktop {
+                    padding-left: 0%;
+                }
+
             }
             
             &:active {
@@ -88,6 +118,10 @@
             }
 
             @include tablet {
+                @include text-style(14px, 22px, 400);
+            }
+
+            @include desktop {
                 @include text-style(14px, 22px, 400);
             }
     
@@ -121,6 +155,10 @@
         @include padding-sides($dt-padding-sides); 
     }
 
+    @include desktop {
+        @include padding-sides($desktop-padding-sides);
+    }
+
     &__title {
         color: white;
 
@@ -134,6 +172,12 @@
             @include text-style(60px, 68px, 700);
             padding-top: 180px;
             padding-bottom: 180px;
+        }
+
+        @include desktop {
+            @include text-style(60px, 68px, 700);
+            padding-top: 560px;
+            padding-bottom: 560px;
         }
     }
 }
@@ -152,6 +196,12 @@
             @include text-style(36px, 44px, 700);
             @include padding-component($dt-padding-top, $dt-padding-sides);
         }
+
+        @include desktop {
+            @include text-style(36px, 44px, 700);
+            @include padding-component($dt-padding-top, $desktop-padding-sides);
+            padding-bottom: $dt-padding-sides;
+        }
     }
     
     &__img {
@@ -166,6 +216,13 @@
             width: 100%;
             height: auto;
             @include padding-sides(100px);
+            padding-bottom: $dt-padding-sides;
+        }
+
+        @include desktop {
+            width: 100%;
+            height: auto;
+            @include padding-sides(calc($desktop-padding-sides + 100px));
             padding-bottom: $dt-padding-sides;
         }
     }
@@ -183,6 +240,12 @@
 
             @include text-style(24px, 32px, 700);
             @include padding-sides(100px);
+        }
+
+        @include desktop {
+
+            @include text-style(24px, 32px, 700);
+            @include padding-sides(calc($desktop-padding-sides + 100px));
         }
 
     }
@@ -203,6 +266,13 @@
             @include padding-sides(100px);
             padding-top: 8px;
         }
+
+        @include desktop {
+
+            @include text-style(14px, 22px, 700);
+            @include padding-sides(calc($desktop-padding-sides + 100px));
+            padding-top: 16px;
+        }
     }
     
     &__band-name {
@@ -221,6 +291,13 @@
             padding-top: $dt-padding-top;
             padding-bottom: $dt-padding-sides;
         }
+
+        @include desktop {
+            @include text-style(24px, 32px, 500);
+            @include padding-sides(calc($desktop-padding-sides + 100px));
+            padding-top: $dt-padding-top;
+            padding-bottom: $dt-padding-sides;
+        }
         
     }
     
@@ -229,7 +306,6 @@
 
         @include mobile {
             @include text-style(13px, 18px, 400);
-            @include padding-component($mobile-padding-sides, $mobile-padding-sides);
         }
 
         @include tablet {
@@ -241,11 +317,36 @@
 
             padding-bottom: $dt-padding-sides;
         }
+
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+
+            @include text-style(14px, 22px, 400);
+            @include padding-sides(calc($desktop-padding-sides + 100px));
+
+            padding-bottom: $dt-padding-sides;
+        }
         
         &-left {
 
+            @include mobile {
+                @include padding-component($mobile-padding-sides, $mobile-padding-sides);
+            }
+
             @include tablet {
                 padding-right: 64px;
+            }
+
+            @include desktop {
+                padding-right: 24px;
+            }
+        }
+
+        &-right {
+            
+            @include mobile {
+                @include padding-component($mobile-padding-sides, $mobile-padding-sides);
             }
         }
     }
@@ -266,6 +367,12 @@
             @include text-style(36px, 44px, 700);
             @include padding-component($dt-padding-top, $dt-padding-sides);
         }
+
+        @include desktop {
+            @include text-style(36px, 44px, 700);
+            @include padding-component($dt-padding-top, $desktop-padding-sides);
+            padding-bottom: $dt-padding-sides;
+        }
     }
 
     &__grid {
@@ -276,7 +383,17 @@
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
+            gap: 24px;
+        }
+
+        @include desktop {
+
+            @include padding-component(0px, $desktop-padding-sides);
+            padding-bottom: $dt-padding-sides;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
     }
     
@@ -292,6 +409,11 @@
         }
 
         @include tablet {
+            width: 100%;
+            height: auto;
+        }
+
+        @include desktop {
             width: 100%;
             height: auto;
         }
@@ -318,9 +440,23 @@
             @include padding-component($dt-padding-top, $dt-padding-sides);
         }
 
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            @include padding-component($dt-padding-top, $desktop-padding-sides);
+            padding-bottom: $dt-padding-sides;
+        }
+
         &-left {
             
             @include tablet {
+                display: flex;
+                align-items: center;
+            }
+
+            @include desktop {
                 display: flex;
                 align-items: center;
             }
@@ -335,6 +471,10 @@
             }
     
             @include tablet {
+                @include text-style(36px, 44px, 700);
+            }
+
+            @include desktop {
                 @include text-style(36px, 44px, 700);
             }
         }
@@ -353,9 +493,17 @@
                 @include padding-sides($dt-padding-sides);
             }
 
+            @include desktop {
+                @include padding-sides($dt-padding-sides);
+            }
+
             &--facebook {
 
                 @include tablet {
+                    padding: 0%;
+                }
+
+                @include desktop {
                     padding: 0%;
                 }
             }
@@ -371,6 +519,11 @@
                 height: 20px;
                 width: 120px;
             }
+
+            @include desktop {
+                height: 20px;
+                width: 120px;
+            }
         }
 
     }
@@ -383,6 +536,15 @@
 
             display: flex;
             justify-content: space-between;
+
+        }
+
+        @include desktop {
+
+            @include text-style(14px, 20px, 400);
+
+            display: flex;
+            justify-content: flex-start;
 
         }
 
@@ -403,6 +565,17 @@
                     font-weight: 700;
                     @include padding-component(0px, $dt-padding-sides);
                 }
+
+                @include desktop {
+                    font-weight: 700;
+                    @include padding-component(0px, $dt-padding-sides);
+                }
+
+                &-1 {
+                    @include desktop {
+                        padding-left: $desktop-padding-sides;
+                    }
+                }
             }
 
             &-address {
@@ -414,6 +587,16 @@
 
                 @include tablet {
                     @include padding-component(0px, $dt-padding-sides);
+                }
+
+                @include desktop {
+                    @include padding-component(0px, $dt-padding-sides);
+                }
+
+                &-1 {
+                    @include desktop {
+                        padding-left: $desktop-padding-sides;
+                    }
                 }
 
             }
@@ -430,6 +613,17 @@
 
                 @include tablet {
                     @include padding-component(0px, $dt-padding-sides);
+                }
+
+                @include desktop {
+                    @include padding-component(0px, $dt-padding-sides);
+                }
+
+                &-1 {
+
+                    @include desktop {
+                        padding-left: $desktop-padding-sides;
+                    }
                 }
 
             }
@@ -463,6 +657,13 @@
         @include tablet {
             @include text-style(14px, 20px, 400);
             @include padding-component(calc($dt-padding-sides*2), $dt-padding-sides);
+        }
+
+        @include desktop {
+            @include text-style(14px, 20px, 400);
+            @include padding-component(calc($dt-padding-sides*2), $dt-padding-sides);
+            
+            padding-left: $desktop-padding-sides;
         }
     }
 }

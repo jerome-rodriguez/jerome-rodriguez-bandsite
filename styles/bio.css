@@ -40,8 +40,19 @@ body {
     padding: 0%;
   }
 }
+@media (min-width: 1920px) {
+  .header {
+    padding: 0%;
+  }
+}
 
 @media (min-width: 320px) and (max-width: 1920px) {
+  .nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1920px) {
   .nav {
     display: flex;
     justify-content: flex-start;
@@ -50,6 +61,12 @@ body {
 @media (min-width: 320px) and (max-width: 1920px) {
   .nav__logo-link {
     padding: 36px;
+  }
+}
+@media (min-width: 1920px) {
+  .nav__logo-link {
+    padding: 36px;
+    padding-left: 128px;
   }
 }
 .nav__logo-img {
@@ -77,6 +94,11 @@ body {
     justify-content: flex-start;
   }
 }
+@media (min-width: 1920px) {
+  .nav__list {
+    justify-content: flex-start;
+  }
+}
 @media (max-width: 320px) {
   .nav__list-item {
     text-align: center;
@@ -87,6 +109,16 @@ body {
 @media (min-width: 320px) and (max-width: 1920px) {
   .nav__list-item {
     padding: 36px;
+  }
+}
+@media (min-width: 1920px) {
+  .nav__list-item {
+    padding: 36px;
+  }
+}
+@media (min-width: 1920px) {
+  .nav__list-item-2 {
+    padding-left: 0%;
   }
 }
 .nav__list-item:active {
@@ -110,6 +142,13 @@ body {
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
+  .nav__list-link {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1920px) {
   .nav__list-link {
     font-size: 14px;
     line-height: 22px;
@@ -147,6 +186,13 @@ body {
     padding-right: 36px;
   }
 }
+@media (min-width: 1920px) {
+  .cover {
+    padding: 0%;
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+}
 .cover__title {
   color: white;
 }
@@ -166,6 +212,15 @@ body {
     font-weight: 700;
     padding-top: 180px;
     padding-bottom: 180px;
+  }
+}
+@media (min-width: 1920px) {
+  .cover__title {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    padding-top: 560px;
+    padding-bottom: 560px;
   }
 }
 
@@ -190,6 +245,16 @@ body {
     padding-top: 48px;
   }
 }
+@media (min-width: 1920px) {
+  .about__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding: 128px;
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+}
 @media (max-width: 320px) {
   .about__img {
     width: 100%;
@@ -205,6 +270,16 @@ body {
     padding: 0%;
     padding-left: 100px;
     padding-right: 100px;
+    padding-bottom: 36px;
+  }
+}
+@media (min-width: 1920px) {
+  .about__img {
+    width: 100%;
+    height: auto;
+    padding: 0%;
+    padding-left: 228px;
+    padding-right: 228px;
     padding-bottom: 36px;
   }
 }
@@ -231,6 +306,16 @@ body {
     padding-right: 100px;
   }
 }
+@media (min-width: 1920px) {
+  .about__quote {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    padding: 0%;
+    padding-left: 228px;
+    padding-right: 228px;
+  }
+}
 .about__quote-source {
   color: #323232;
 }
@@ -252,6 +337,17 @@ body {
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 8px;
+  }
+}
+@media (min-width: 1920px) {
+  .about__quote-source {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    padding: 0%;
+    padding-left: 228px;
+    padding-right: 228px;
+    padding-top: 16px;
   }
 }
 .about__band-name {
@@ -279,6 +375,18 @@ body {
     padding-bottom: 36px;
   }
 }
+@media (min-width: 1920px) {
+  .about__band-name {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    padding: 0%;
+    padding-left: 228px;
+    padding-right: 228px;
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+}
 .about__band-bio {
   color: #323232;
 }
@@ -287,8 +395,6 @@ body {
     font-size: 13px;
     line-height: 18px;
     font-weight: 400;
-    padding: 16px;
-    padding-top: 16px;
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
@@ -304,9 +410,39 @@ body {
     padding-bottom: 36px;
   }
 }
+@media (min-width: 1920px) {
+  .about__band-bio {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+    padding: 0%;
+    padding-left: 228px;
+    padding-right: 228px;
+    padding-bottom: 36px;
+  }
+}
+@media (max-width: 320px) {
+  .about__band-bio-left {
+    padding: 16px;
+    padding-top: 16px;
+  }
+}
 @media (min-width: 320px) and (max-width: 1920px) {
   .about__band-bio-left {
     padding-right: 64px;
+  }
+}
+@media (min-width: 1920px) {
+  .about__band-bio-left {
+    padding-right: 24px;
+  }
+}
+@media (max-width: 320px) {
+  .about__band-bio-right {
+    padding: 16px;
+    padding-top: 16px;
   }
 }
 
@@ -334,13 +470,33 @@ body {
     padding-top: 48px;
   }
 }
+@media (min-width: 1920px) {
+  .photos__title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding: 128px;
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+}
 @media (min-width: 320px) and (max-width: 1920px) {
   .photos__grid {
     padding: 36px;
     padding-top: 0px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 24px;
+  }
+}
+@media (min-width: 1920px) {
+  .photos__grid {
+    padding: 128px;
+    padding-top: 0px;
+    padding-bottom: 36px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 }
 .photos__card-img {
@@ -356,6 +512,12 @@ body {
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
+  .photos__card-img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 1920px) {
   .photos__card-img {
     width: 100%;
     height: auto;
@@ -378,7 +540,23 @@ body {
     padding-top: 48px;
   }
 }
+@media (min-width: 1920px) {
+  .contact__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 128px;
+    padding-top: 48px;
+    padding-bottom: 36px;
+  }
+}
 @media (min-width: 320px) and (max-width: 1920px) {
+  .contact__heading-left {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1920px) {
   .contact__heading-left {
     display: flex;
     align-items: center;
@@ -394,6 +572,13 @@ body {
   }
 }
 @media (min-width: 320px) and (max-width: 1920px) {
+  .contact__heading-title {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1920px) {
   .contact__heading-title {
     font-size: 36px;
     line-height: 44px;
@@ -417,7 +602,19 @@ body {
     padding-right: 36px;
   }
 }
+@media (min-width: 1920px) {
+  .contact__heading-logo {
+    padding: 0%;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
 @media (min-width: 320px) and (max-width: 1920px) {
+  .contact__heading-logo--facebook {
+    padding: 0%;
+  }
+}
+@media (min-width: 1920px) {
   .contact__heading-logo--facebook {
     padding: 0%;
   }
@@ -433,6 +630,12 @@ body {
     width: 120px;
   }
 }
+@media (min-width: 1920px) {
+  .contact__heading-band {
+    height: 20px;
+    width: 120px;
+  }
+}
 @media (min-width: 320px) and (max-width: 1920px) {
   .contact__brand {
     font-size: 14px;
@@ -440,6 +643,15 @@ body {
     font-weight: 400;
     display: flex;
     justify-content: space-between;
+  }
+}
+@media (min-width: 1920px) {
+  .contact__brand {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
   }
 }
 @media (max-width: 320px) {
@@ -463,6 +675,18 @@ body {
     padding-top: 0px;
   }
 }
+@media (min-width: 1920px) {
+  .contact__brand-info-name {
+    font-weight: 700;
+    padding: 36px;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 1920px) {
+  .contact__brand-info-name-1 {
+    padding-left: 128px;
+  }
+}
 @media (max-width: 320px) {
   .contact__brand-info-address {
     font-size: 13px;
@@ -476,6 +700,17 @@ body {
   .contact__brand-info-address {
     padding: 36px;
     padding-top: 0px;
+  }
+}
+@media (min-width: 1920px) {
+  .contact__brand-info-address {
+    padding: 36px;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 1920px) {
+  .contact__brand-info-address-1 {
+    padding-left: 128px;
   }
 }
 .contact__brand-info-email {
@@ -495,6 +730,17 @@ body {
   .contact__brand-info-email {
     padding: 36px;
     padding-top: 0px;
+  }
+}
+@media (min-width: 1920px) {
+  .contact__brand-info-email {
+    padding: 36px;
+    padding-top: 0px;
+  }
+}
+@media (min-width: 1920px) {
+  .contact__brand-info-email-1 {
+    padding-left: 128px;
   }
 }
 @media (max-width: 320px) {
@@ -529,5 +775,15 @@ body {
     font-weight: 400;
     padding: 36px;
     padding-top: 72px;
+  }
+}
+@media (min-width: 1920px) {
+  .contact__copyright {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 36px;
+    padding-top: 72px;
+    padding-left: 128px;
   }
 }/*# sourceMappingURL=bio.css.map */
