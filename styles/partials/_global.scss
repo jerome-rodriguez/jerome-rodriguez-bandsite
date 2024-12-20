@@ -3,381 +3,340 @@
 @use "mixins" as *;
 @use "fonts" as *;
 
-*, *::before, *::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "NunitoSans", Arial, Helvetica, sans-serif;
+  font-family: "NunitoSans", Arial, Helvetica, sans-serif;
 }
 
 .header {
-    background-color: $bandsite-black;
+  background-color: $bandsite-black;
 
-    @include mobile {
-        @include padding-component($mobile-padding-sides, 0px);
-    }
+  @include padding-component($mobile-padding-sides, 0px);
 
-    @include tablet {
-        padding: 0%;
-    }
+  @include tablet {
+    padding: 0%;
+  }
 
-    @include desktop {
-        padding: 0%;
-    }
+  @include desktop {
+    padding: 0%;
+  }
 }
 
 .nav {
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+  }
 
+  @include desktop {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__logo-link {
     @include tablet {
-        display: flex;
-        justify-content: flex-start;
+      padding: $dt-padding-sides;
     }
 
     @include desktop {
-        display: flex;
-        justify-content: flex-start;
+      padding: $dt-padding-sides;
+      padding-left: $desktop-padding-sides;
+    }
+  }
+
+  &__logo-img {
+    height: 1.25rem;
+    width: 7.5rem;
+
+    display: flex;
+    justify-self: center;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+
+    padding-top: $mobile-padding-sides;
+    justify-content: space-around;
+
+    @include tablet {
+      justify-content: flex-start;
     }
 
-    &__logo-link {
-
-        @include tablet {
-            padding: $dt-padding-sides;
-        }
-
-        @include desktop {
-            padding: $dt-padding-sides;
-            padding-left: $desktop-padding-sides;
-        }
+    @include desktop {
+      justify-content: flex-start;
     }
 
-    &__logo-img {
-        height: 1.25rem;
-        width: 7.5rem;
+    &-item {
+      text-align: center;
+      width: 100%;
+      padding-bottom: $mobile-padding-sides;
 
-        @include mobile {
-            display: flex;
-            justify-self: center;
-        }
+      @include tablet {
+        padding: $dt-padding-sides;
+      }
+
+      @include desktop {
+        padding: $dt-padding-sides;
+      }
+
+      &:active {
+        color: $white;
+        border-bottom: 0.25rem solid $white;
+        font-weight: 700;
+      }
+
+      &:hover {
+        color: $white;
+        border-bottom: 0.25rem solid $white;
+      }
     }
-    
-    &__list {
-        list-style-type: none;
-        display: flex;
 
-        @include mobile {
-
-            padding-top: $mobile-padding-sides;
-            justify-content: space-around;
-        }
-    
-        @include tablet {
-            justify-content: flex-start;
-        }
-
-        @include desktop {
-            justify-content: flex-start;
-        }
-    
-        &-item {
-
-            @include mobile {
-                text-align: center;
-                width: 100%;
-                padding-bottom: $mobile-padding-sides;
-            }
-
-            @include tablet {
-                padding: $dt-padding-sides;
-            }
-
-            @include desktop {
-                padding: $dt-padding-sides;
-            }
-            
-            &:active {
-                color: $white;
-                border-bottom: 0.25rem solid $white;
-                font-weight: 700;
-            }
-    
-            &:hover {
-                color: $white;
-                border-bottom: 0.25rem solid $white;
-            }
-        }
-    
     // FIX: underline and text colour don't change together at hover!
-    
-        &-link {
-            color: $mercury;
-            text-decoration: none;
 
-            @include mobile {
-                @include text-style(0.8125rem, 1.125rem, 400);
-            }
+    &-link {
+      color: $mercury;
+      text-decoration: none;
 
-            @include tablet {
-                @include text-style(0.875rem, 1.375rem, 400);
-            }
+      @include text-style(0.8125rem, 1.125rem, 400);
 
-            @include desktop {
-                @include text-style(0.875rem, 1.375rem, 400);
-            }
-    
-            &:active { 
-                color: $white;
-                font-weight: 700;
-            }
+      @include tablet {
+        @include text-style(0.875rem, 1.375rem, 400);
+      }
 
-            &:hover {
-                color: $white;
-        
-            }
-        }
+      @include desktop {
+        @include text-style(0.875rem, 1.375rem, 400);
+      }
+
+      &:active {
+        color: $white;
+        font-weight: 700;
+      }
+
+      &:hover {
+        color: $white;
+      }
     }
+  }
 }
 
 .contact {
-    background-color: $bandsite-black;
-    color: $white;
+  background-color: $bandsite-black;
+  color: $white;
 
-    &__heading {
+  &__heading {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
 
-        @include tablet {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-
-            @include padding-component($dt-padding-top, $dt-padding-sides);
-        }
-
-        @include desktop {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-
-            @include padding-component($dt-padding-top, $desktop-padding-sides);
-            padding-bottom: $dt-padding-sides;
-        }
-
-        &-left {
-            
-            @include tablet {
-                display: flex;
-                align-items: center;
-            }
-
-            @include desktop {
-                display: flex;
-                align-items: center;
-            }
-
-        }
-
-        &-title {
-
-            @include mobile {
-                @include text-style(1.5rem, 2rem, 700);
-                @include padding-component($mobile-padding-top, $mobile-padding-sides); 
-            }
-    
-            @include tablet {
-                @include text-style(2.25rem, 2.75rem, 700);
-            }
-
-            @include desktop {
-                @include text-style(2.25rem, 2.75rem, 700);
-            }
-        }
-
-        &-link {
-            text-decoration: none;
-        }
-
-        &-logo {
-
-            @include mobile {
-                @include padding-sides($mobile-padding-sides);
-            }
-
-            @include tablet {
-                @include padding-sides($dt-padding-sides);
-            }
-
-            @include desktop {
-                @include padding-sides($dt-padding-sides);
-            }
-
-            &--facebook {
-
-                @include tablet {
-                    padding: 0%;
-                }
-
-                @include desktop {
-                    padding: 0%;
-                }
-            }
-        }
-
-        &-band {
-
-            @include mobile {
-                display: none;
-            }
-
-            @include tablet {
-                height: 1.25rem;
-                width: 7.5rem;
-            }
-
-            @include desktop {
-                height: 1.25rem;
-                width: 7.5rem;
-            }
-        }
-
+      @include padding-component($dt-padding-top, $dt-padding-sides);
     }
-    
-    &__brand {
 
-        @include tablet {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
 
-            @include text-style(0.875rem, 1.25rem, 400);
-
-            display: flex;
-            justify-content: space-between;
-
-        }
-
-        @include desktop {
-
-            @include text-style(0.875rem, 1.25rem, 400);
-
-            display: flex;
-            justify-content: flex-start;
-
-        }
-
-        &-info {
-
-            @include mobile {
-                padding-bottom: $mobile-padding-sides;
-            }
-
-            &-name {
-
-                @include mobile {
-                    @include text-style(0.875rem, 1.375rem, 600);
-                    @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-                }
-
-                @include tablet {
-                    font-weight: 700;
-                    @include padding-component(0px, $dt-padding-sides);
-                }
-
-                @include desktop {
-                    font-weight: 700;
-                    @include padding-component(0px, $dt-padding-sides);
-                }
-
-                &-1 {
-                    @include desktop {
-                        padding-left: $desktop-padding-sides;
-                    }
-                }
-            }
-
-            &-address {
-
-                @include mobile {
-                    @include text-style(0.8125rem, 1.125rem, 400);
-                    @include padding-component(0px, $mobile-padding-sides);
-                }
-
-                @include tablet {
-                    @include padding-component(0px, $dt-padding-sides);
-                }
-
-                @include desktop {
-                    @include padding-component(0px, $dt-padding-sides);
-                }
-
-                &-1 {
-                    @include desktop {
-                        padding-left: $desktop-padding-sides;
-                    }
-                }
-
-            }
-
-            &-email {
-
-                text-decoration: none;
-                color: $white;
-
-                @include mobile {
-                    @include text-style(0.8125rem, 1.125rem, 400);
-                    @include padding-component(0px, $mobile-padding-sides);
-                }
-
-                @include tablet {
-                    @include padding-component(0px, $dt-padding-sides);
-                }
-
-                @include desktop {
-                    @include padding-component(0px, $dt-padding-sides);
-                }
-
-                &-1 {
-
-                    @include desktop {
-                        padding-left: $desktop-padding-sides;
-                    }
-                }
-
-            }
-
-        }
-
+      @include padding-component($dt-padding-top, $desktop-padding-sides);
+      padding-bottom: $dt-padding-sides;
     }
-    
-    &__band-logo {
 
-        @include mobile {
-            @include padding-component(calc($mobile-padding-top*2), $mobile-padding-sides);
-        }
+    &-left {
+      @include tablet {
+        display: flex;
+        align-items: center;
+      }
 
-        @include tablet {
-            display: none;
-        }
-
-        @include desktop {
-            display: none;
-        }
+      @include desktop {
+        display: flex;
+        align-items: center;
+      }
     }
-    
-    &__copyright {
 
-        @include mobile {
-            @include text-style(0.8125rem, 1.125rem, 400);
-            @include padding-component(0px, $mobile-padding-sides);
-        }
+    &-title {
+      @include text-style(1.5rem, 2rem, 700);
+      @include padding-component($mobile-padding-top, $mobile-padding-sides);
 
+      @include tablet {
+        @include text-style(2.25rem, 2.75rem, 700);
+      }
+
+      @include desktop {
+        @include text-style(2.25rem, 2.75rem, 700);
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+    }
+
+    &-logo {
+      @include padding-sides($mobile-padding-sides);
+
+      @include tablet {
+        @include padding-sides($dt-padding-sides);
+      }
+
+      @include desktop {
+        @include padding-sides($dt-padding-sides);
+      }
+
+      &--facebook {
         @include tablet {
-            @include text-style(0.875rem, 1.25rem, 400);
-            @include padding-component(calc($dt-padding-sides*2), $dt-padding-sides);
+          padding: 0%;
         }
 
         @include desktop {
-            @include text-style(0.875rem, 1.25rem, 400);
-            @include padding-component(calc($dt-padding-sides*2), $dt-padding-sides);
-            
+          padding: 0%;
+        }
+      }
+    }
+
+    &-band {
+      display: none;
+
+      @include tablet {
+        display: flex;
+        height: 1.25rem;
+        width: 7.5rem;
+      }
+
+      @include desktop {
+        display: flex;
+        height: 1.25rem;
+        width: 7.5rem;
+      }
+    }
+  }
+
+  &__brand {
+    @include tablet {
+      @include text-style(0.875rem, 1.25rem, 400);
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include desktop {
+      @include text-style(0.875rem, 1.25rem, 400);
+
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &-info {
+      padding-bottom: $mobile-padding-sides;
+
+      &-name {
+        @include text-style(0.875rem, 1.375rem, 600);
+        @include padding-component(
+          $mobile-padding-sides,
+          $mobile-padding-sides
+        );
+
+        @include tablet {
+          font-weight: 700;
+          @include padding-component(0px, $dt-padding-sides);
+        }
+
+        @include desktop {
+          font-weight: 700;
+          @include padding-component(0px, $dt-padding-sides);
+        }
+
+        &-1 {
+          @include desktop {
             padding-left: $desktop-padding-sides;
+          }
         }
+      }
+
+      &-address {
+        @include text-style(0.8125rem, 1.125rem, 400);
+        @include padding-component(0px, $mobile-padding-sides);
+
+        @include tablet {
+          @include padding-component(0px, $dt-padding-sides);
+        }
+
+        @include desktop {
+          @include padding-component(0px, $dt-padding-sides);
+        }
+
+        &-1 {
+          @include desktop {
+            padding-left: $desktop-padding-sides;
+          }
+        }
+      }
+
+      &-email {
+        text-decoration: none;
+        color: $white;
+
+        @include text-style(0.8125rem, 1.125rem, 400);
+        @include padding-component(0px, $mobile-padding-sides);
+
+        @include tablet {
+          @include padding-component(0px, $dt-padding-sides);
+        }
+
+        @include desktop {
+          @include padding-component(0px, $dt-padding-sides);
+        }
+
+        &-1 {
+          @include desktop {
+            padding-left: $desktop-padding-sides;
+          }
+        }
+      }
     }
+  }
+
+  &__band-logo {
+    @include padding-component(
+      calc($mobile-padding-top * 2),
+      $mobile-padding-sides
+    );
+
+    @include tablet {
+      display: none;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__copyright {
+    @include text-style(0.8125rem, 1.125rem, 400);
+    @include padding-component(0px, $mobile-padding-sides);
+
+    @include tablet {
+      @include text-style(0.875rem, 1.25rem, 400);
+      @include padding-component(
+        calc($dt-padding-sides * 2),
+        $dt-padding-sides
+      );
+    }
+
+    @include desktop {
+      @include text-style(0.875rem, 1.25rem, 400);
+      @include padding-component(
+        calc($dt-padding-sides * 2),
+        $dt-padding-sides
+      );
+
+      padding-left: $desktop-padding-sides;
+    }
+  }
 }

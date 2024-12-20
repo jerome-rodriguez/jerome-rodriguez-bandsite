@@ -4,289 +4,247 @@
 @use "./partials/fonts" as *;
 
 .cover {
-    box-sizing: border-box;
-    background: linear-gradient(rgba($bandsite-black, 0.5), rgba($bandsite-black, 0.5)), url(/assets/images/hero-bio.jpg) center/cover no-repeat;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  background: linear-gradient(
+      rgba($bandsite-black, 0.5),
+      rgba($bandsite-black, 0.5)
+    ),
+    url(/assets/images/hero-bio.jpg) center/cover no-repeat;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
-    @include mobile {
-        @include padding-sides($mobile-padding-sides);
-    }
+  @include padding-sides($mobile-padding-sides);
+
+  @include tablet {
+    @include padding-sides($dt-padding-sides);
+  }
+
+  @include desktop {
+    @include padding-sides($desktop-padding-sides);
+  }
+
+  &__title {
+    color: white;
+
+    @include text-style(1.5rem, 2rem, 700);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     @include tablet {
-        @include padding-sides($dt-padding-sides); 
+      @include text-style(3.75rem, 4.25rem, 700);
+      padding-top: 11.25rem;
+      padding-bottom: 11.25rem;
     }
 
     @include desktop {
-        @include padding-sides($desktop-padding-sides);
+      @include text-style(3.75rem, 4.25rem, 700);
+      padding-top: 35rem;
+      padding-bottom: 35rem;
     }
-
-    &__title {
-        color: white;
-
-        @include mobile {
-            @include text-style(1.5rem, 2rem, 700);
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-        }
-
-        @include tablet {
-            @include text-style(3.75rem, 4.25rem, 700);
-            padding-top: 11.25rem;
-            padding-bottom: 11.25rem;
-        }
-
-        @include desktop {
-            @include text-style(3.75rem, 4.25rem, 700);
-            padding-top: 35rem;
-            padding-bottom: 35rem;
-        }
-    }
+  }
 }
 
 .about {
+  &__title {
+    color: $bandsite-black;
 
-    &__title {
-        color: $bandsite-black;
-    
-        @include mobile {
-            @include text-style(1.5rem, 2rem, 700);
-            @include padding-component($mobile-padding-top, $mobile-padding-sides);
-        }
+    @include text-style(1.5rem, 2rem, 700);
+    @include padding-component($mobile-padding-top, $mobile-padding-sides);
 
-        @include tablet {
-            @include text-style(2.25rem, 2.75rem, 700);
-            @include padding-component($dt-padding-top, $dt-padding-sides);
-        }
-
-        @include desktop {
-            @include text-style(2.25rem, 2.75rem, 700);
-            @include padding-component($dt-padding-top, $desktop-padding-sides);
-            padding-bottom: $dt-padding-sides;
-        }
+    @include tablet {
+      @include text-style(2.25rem, 2.75rem, 700);
+      @include padding-component($dt-padding-top, $dt-padding-sides);
     }
-    
-    &__img {
 
-        @include mobile {
-            width: 100%;
-            height: auto;
-            @include padding-component(0px, $mobile-padding-sides);
-        }
-
-        @include tablet {
-            width: 100%;
-            height: auto;
-            @include padding-sides(6.25rem);
-            padding-bottom: $dt-padding-sides;
-        }
-
-        @include desktop {
-            width: 100%;
-            height: auto;
-            @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-            padding-bottom: $dt-padding-sides;
-        }
+    @include desktop {
+      @include text-style(2.25rem, 2.75rem, 700);
+      @include padding-component($dt-padding-top, $desktop-padding-sides);
+      padding-bottom: $dt-padding-sides;
     }
-    
-    &__quote {
-        color: $bandsite-black;
+  }
 
-        @include mobile {
+  &__img {
+    width: 100%;
+    height: auto;
+    @include padding-component(0px, $mobile-padding-sides);
 
-            @include text-style(0.875rem, 1.375rem, 600);
-            @include padding-sides($mobile-padding-sides);
-        }
-        
-        @include tablet {
-
-            @include text-style(1.5rem, 2rem, 700);
-            @include padding-sides(6.25rem);
-        }
-
-        @include desktop {
-
-            @include text-style(1.5rem, 2rem, 700);
-            @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-        }
-
+    @include tablet {
+      width: 100%;
+      height: auto;
+      @include padding-sides(6.25rem);
+      padding-bottom: $dt-padding-sides;
     }
-    
-    &__quote-source {
-        color: $bandsite-black;
 
-        @include mobile {
-
-            @include text-style(0.875rem, 1.375rem, 600);
-            @include padding-component(0px, $mobile-padding-sides);
-        }
-    
-
-        @include tablet {
-
-            @include text-style(0.875rem, 1.375rem, 700);
-            @include padding-sides(6.25rem);
-            padding-top: 0.5rem;
-        }
-
-        @include desktop {
-
-            @include text-style(0.875rem, 1.375rem, 700);
-            @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-            padding-top: 1rem;
-        }
+    @include desktop {
+      width: 100%;
+      height: auto;
+      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
+      padding-bottom: $dt-padding-sides;
     }
-    
-    &__band-name {
-        color: $bandsite-darkblack;
+  }
 
-        @include mobile {
+  &__quote {
+    color: $bandsite-black;
 
-            @include text-style(0.8125rem, 1.125rem, 400);
-            @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-            padding-bottom: 0%;
-        }
+    @include text-style(0.875rem, 1.375rem, 600);
+    @include padding-sides($mobile-padding-sides);
 
-        @include tablet {
-            @include text-style(1.5rem, 2rem, 500);
-            @include padding-sides(6.25rem);
-            padding-top: $dt-padding-top;
-            padding-bottom: $dt-padding-sides;
-        }
-
-        @include desktop {
-            @include text-style(1.5rem, 2rem, 500);
-            @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-            padding-top: $dt-padding-top;
-            padding-bottom: $dt-padding-sides;
-        }
-        
+    @include tablet {
+      @include text-style(1.5rem, 2rem, 700);
+      @include padding-sides(6.25rem);
     }
-    
-    &__band-bio {
-        color: $bandsite-black;
 
-        @include mobile {
-            @include text-style(0.8125rem, 1.125rem, 400);
-        }
-
-        @include tablet {
-            display: flex;
-            justify-content: space-between;
-
-            @include text-style(0.875rem, 1.375rem, 400);
-            @include padding-sides(6.25rem);
-
-            padding-bottom: $dt-padding-sides;
-        }
-
-        @include desktop {
-            display: flex;
-            justify-content: space-between;
-
-            @include text-style(0.875rem, 1.375rem, 400);
-            @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-
-            padding-bottom: $dt-padding-sides;
-        }
-        
-        &-left {
-
-            @include mobile {
-                @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-            }
-
-            @include tablet {
-                padding-right: 4rem;
-            }
-
-            @include desktop {
-                padding-right: 1.5rem;
-            }
-        }
-
-        &-right {
-            
-            @include mobile {
-                @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-            }
-        }
+    @include desktop {
+      @include text-style(1.5rem, 2rem, 700);
+      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
     }
+  }
+
+  &__quote-source {
+    color: $bandsite-black;
+
+    @include text-style(0.875rem, 1.375rem, 600);
+    @include padding-component(0px, $mobile-padding-sides);
+
+    @include tablet {
+      @include text-style(0.875rem, 1.375rem, 700);
+      @include padding-sides(6.25rem);
+      padding-top: 0.5rem;
+    }
+
+    @include desktop {
+      @include text-style(0.875rem, 1.375rem, 700);
+      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
+      padding-top: 1rem;
+    }
+  }
+
+  &__band-name {
+    color: $bandsite-darkblack;
+
+    @include text-style(0.8125rem, 1.125rem, 400);
+    @include padding-component($mobile-padding-sides, $mobile-padding-sides);
+    padding-bottom: 0%;
+
+    @include tablet {
+      @include text-style(1.5rem, 2rem, 500);
+      @include padding-sides(6.25rem);
+      padding-top: $dt-padding-top;
+      padding-bottom: $dt-padding-sides;
+    }
+
+    @include desktop {
+      @include text-style(1.5rem, 2rem, 500);
+      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
+      padding-top: $dt-padding-top;
+      padding-bottom: $dt-padding-sides;
+    }
+  }
+
+  &__band-bio {
+    color: $bandsite-black;
+
+    @include text-style(0.8125rem, 1.125rem, 400);
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+
+      @include text-style(0.875rem, 1.375rem, 400);
+      @include padding-sides(6.25rem);
+
+      padding-bottom: $dt-padding-sides;
+    }
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+
+      @include text-style(0.875rem, 1.375rem, 400);
+      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
+
+      padding-bottom: $dt-padding-sides;
+    }
+
+    &-left {
+      @include padding-component($mobile-padding-sides, $mobile-padding-sides);
+
+      @include tablet {
+        padding-right: 4rem;
+      }
+
+      @include desktop {
+        padding-right: 1.5rem;
+      }
+    }
+
+    &-right {
+      @include padding-component($mobile-padding-sides, $mobile-padding-sides);
+      // will need @incluce tablet and @include desktop ?? if padding above not needed or want smthn different
+    }
+  }
 }
 
 .photos {
-    background-color: $alabaster;
+  background-color: $alabaster;
 
-    &__title {
-        color: $bandsite-black;
+  &__title {
+    color: $bandsite-black;
 
-        @include mobile {
-            @include text-style(1.5rem, 2rem, 700);
-            @include padding-component($mobile-padding-top, $mobile-padding-sides);
-        }
+    @include text-style(1.5rem, 2rem, 700);
+    @include padding-component($mobile-padding-top, $mobile-padding-sides);
 
-        @include tablet {
-            @include text-style(2.25rem, 2.75rem, 700);
-            @include padding-component($dt-padding-top, $dt-padding-sides);
-        }
-
-        @include desktop {
-            @include text-style(2.25rem, 2.75rem, 700);
-            @include padding-component($dt-padding-top, $desktop-padding-sides);
-            padding-bottom: $dt-padding-sides;
-        }
+    @include tablet {
+      @include text-style(2.25rem, 2.75rem, 700);
+      @include padding-component($dt-padding-top, $dt-padding-sides);
     }
 
-    &__grid {
-
-        @include tablet {
-
-            @include padding-component(0px, $dt-padding-sides);
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        @include desktop {
-
-            @include padding-component(0px, $desktop-padding-sides);
-            padding-bottom: $dt-padding-sides;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
+    @include desktop {
+      @include text-style(2.25rem, 2.75rem, 700);
+      @include padding-component($dt-padding-top, $desktop-padding-sides);
+      padding-bottom: $dt-padding-sides;
     }
-    
-    &__card-img {
+  }
 
-        @include mobile {
+  &__grid {
+    @include tablet {
+      @include padding-component(0px, $dt-padding-sides);
 
-            @include padding-component(0px, $mobile-padding-sides);
-
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-
-        @include tablet {
-            width: 100%;
-            height: auto;
-        }
-
-        @include desktop {
-            width: 100%;
-            height: auto;
-        }
-
-        filter: grayscale(100%);
-    
-        &:hover {
-            filter: grayscale(0%);
-        }
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
     }
+
+    @include desktop {
+      @include padding-component(0px, $desktop-padding-sides);
+      padding-bottom: $dt-padding-sides;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  &__card-img {
+    @include padding-component(0px, $mobile-padding-sides);
+
+    display: block;
+    width: 100%;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+
+    filter: grayscale(100%);
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
 }
