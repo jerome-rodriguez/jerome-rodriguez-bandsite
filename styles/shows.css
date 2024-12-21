@@ -105,16 +105,16 @@ body {
   }
 }
 .nav__list-item:active {
-  color: #FFFFFF;
-  border-bottom: 0.25rem solid #FFFFFF;
+  color: #ffffff;
+  border-bottom: 0.25rem solid #ffffff;
   font-weight: 700;
 }
 .nav__list-item:hover {
-  color: #FFFFFF;
-  border-bottom: 0.25rem solid #FFFFFF;
+  color: #ffffff;
+  border-bottom: 0.25rem solid #ffffff;
 }
 .nav__list-link {
-  color: #E1E1E1;
+  color: #e1e1e1;
   text-decoration: none;
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -135,16 +135,16 @@ body {
   }
 }
 .nav__list-link:active {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
 }
 .nav__list-link:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .contact {
   background-color: #323232;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .contact__heading {
@@ -320,7 +320,7 @@ body {
 }
 .contact__brand-info-email {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 400;
