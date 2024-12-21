@@ -23,21 +23,21 @@ const defaultComments = [
 
 // 2. function to creat HTML for comments
 
-function createCommentCard(note) {
+function createCommentCard(comment) {
   const cardElement = document.createElement("article");
   cardElement.classList.add("comments__card");
 
   const nameElement = document.createElement("p");
   nameElement.classList.add("comments__name");
-  nameElement.innerText = note.name;
+  nameElement.innerText = comment.name;
 
   const dateElement = document.createElement("span");
   dateElement.classList.add("comments__date");
-  dateElement.innerText = note.date;
+  dateElement.innerText = comment.date;
 
   const commentElement = document.createElement("p");
   commentElement.classList.add("comments__comment");
-  commentElement.innerText = note.comment;
+  commentElement.innerText = comment.comment;
 
   cardElement.appendChild(nameElement);
   cardElement.appendChild(dateElement);
@@ -51,6 +51,15 @@ createCommentCard({ name: "Bill", date: "12/19/2024", comment: "text 1" });
 createCommentCard({ name: "John", date: "12/24/2024", comment: "text 2" });
 createCommentCard({ name: "Sarah", date: "12/12/2024", comment: "text 3" });
 
+//function to create HTML for horizontal line
+
+function createLine() {
+  const lineElement = document.createElement("hr");
+  lineElement.classList.add("shows__line");
+
+  return lineElement;
+}
+
 // 3. function to render HTML to browser
 
 const renderCommentCards = () => {
@@ -60,8 +69,10 @@ const renderCommentCards = () => {
 
   for (let i = 0; i < defaultComments.length; i++) {
     const card = createCommentCard(defaultComments[i]);
+    const line = createLine();
 
     myCommentEl.appendChild(card);
+    myCommentEl.appendChild(line);
   }
 };
 
