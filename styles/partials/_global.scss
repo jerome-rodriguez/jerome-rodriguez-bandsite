@@ -233,14 +233,9 @@ body {
     }
 
     &-info {
-      padding-bottom: $mobile-padding-sides;
-
       &-name {
         @include text-style(0.875rem, 1.375rem, 600);
-        @include padding-component(
-          $mobile-padding-sides,
-          $mobile-padding-sides
-        );
+        @include padding-component($mobile-padding-top, $mobile-padding-sides);
 
         @include tablet {
           font-weight: 700;
@@ -252,16 +247,16 @@ body {
           @include padding-component(0px, $dt-padding-sides);
         }
 
-        &-1 {
-          @include desktop {
-            padding-left: $desktop-padding-sides;
-          }
-        }
+        // &-1 {
+        //   @include desktop {
+        //     padding-left: $desktop-padding-sides;
+        //   }
+        // }
       }
 
       &-address {
         @include text-style(0.8125rem, 1.125rem, 400);
-        @include padding-component(0px, $mobile-padding-sides);
+        @include padding-sides($mobile-padding-sides);
 
         @include tablet {
           @include padding-component(0px, $dt-padding-sides);
@@ -271,10 +266,14 @@ body {
           @include padding-component(0px, $dt-padding-sides);
         }
 
-        &-1 {
-          @include desktop {
-            padding-left: $desktop-padding-sides;
-          }
+        // &-1 {
+        //   @include desktop {
+        //     padding-left: $desktop-padding-sides;
+        //   }
+        // }
+
+        &-2 {
+          @include padding-component(0px, $mobile-padding-sides);
         }
       }
 
@@ -283,7 +282,7 @@ body {
         color: $white;
 
         @include text-style(0.8125rem, 1.125rem, 400);
-        @include padding-component(0px, $mobile-padding-sides);
+        @include padding-sides($mobile-padding-sides);
 
         @include tablet {
           @include padding-component(0px, $dt-padding-sides);
@@ -318,8 +317,9 @@ body {
   }
 
   &__copyright {
-    @include text-style(0.8125rem, 1.125rem, 400);
-    @include padding-component(0px, $mobile-padding-sides);
+    @include text-style(11px, 18px, 400);
+    @include padding-sides($mobile-padding-sides);
+    padding-bottom: $mobile-padding-top;
 
     @include tablet {
       @include text-style(0.875rem, 1.25rem, 400);
