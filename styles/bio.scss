@@ -316,11 +316,11 @@
       }
     }
 
-    &-button {
-      @include button;
-      @include text-style(14px, 22px, 700);
-      font-family: inherit;
-    }
+    // &-button {
+    //   @include button;
+    //   @include text-style(14px, 22px, 700);
+    //   font-family: inherit;
+    // }
   }
 
   &__line {

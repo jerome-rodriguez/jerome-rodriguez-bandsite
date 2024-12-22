@@ -40,29 +40,32 @@ function createShowCard(show) {
   cardElement.classList.add("shows__card");
 
   const dateHeader = document.createElement("h4");
-  dateHeader.classList.add("shows__header");
-  dateHeader.classList.add("shows__header--bold");
+  dateHeader.classList.add("shows__card-header");
   dateHeader.innerText = "DATE";
 
   const dateElement = document.createElement("p");
-  dateElement.classList.add("shows__date");
+  dateElement.classList.add("shows__card-date");
   dateElement.innerText = show.date;
 
   const venueHeader = document.createElement("h4");
-  venueHeader.classList.add("shows__header");
+  venueHeader.classList.add("shows__card-header");
   venueHeader.innerText = "VENUE";
 
   const venueElement = document.createElement("p");
-  venueElement.classList.add("shows__venue");
+  venueElement.classList.add("shows__card-venue");
   venueElement.innerText = show.venue;
 
   const locationHeader = document.createElement("h4");
-  locationHeader.classList.add("shows__header");
+  locationHeader.classList.add("shows__card-header");
   locationHeader.innerText = "LOCATION";
 
   const locationElement = document.createElement("p");
-  locationElement.classList.add("shows__location");
+  locationElement.classList.add("shows__card-location");
   locationElement.innerText = show.location;
+
+  const buttonElement = document.createElement("button");
+  buttonElement.classList.add("shows__card-button");
+  buttonElement.innerText = "BUY TICKETS";
 
   cardElement.appendChild(dateHeader);
   cardElement.appendChild(dateElement);
@@ -70,6 +73,7 @@ function createShowCard(show) {
   cardElement.appendChild(venueElement);
   cardElement.appendChild(locationHeader);
   cardElement.appendChild(locationElement);
+  cardElement.appendChild(buttonElement);
 
   console.log(cardElement);
   return cardElement;
@@ -88,13 +92,13 @@ createShowCard({
 
 // function to create HTML for button
 
-function createButton() {
-  const buttonElement = document.createElement("button");
-  buttonElement.classList.add("shows__button");
-  buttonElement.innerText = "BUY TICKETS";
+// function createButton() {
+//   const buttonElement = document.createElement("button");
+//   buttonElement.classList.add("shows__button");
+//   buttonElement.innerText = "BUY TICKETS";
 
-  return buttonElement;
-}
+//   return buttonElement;
+// }
 
 //function to create HTML for horizontal line
 
@@ -120,12 +124,10 @@ const renderShowsCards = () => {
 
   for (let i = 0; i < shows.length; i++) {
     const card = createShowCard(shows[i]);
-    const buttonEl = createButton();
-    const lineEl = createLine();
+    const line = createLine();
 
     myShowsEl.appendChild(card);
-    myShowsEl.appendChild(buttonEl);
-    myShowsEl.appendChild(lineEl);
+    myShowsEl.appendChild(line);
   }
 };
 

@@ -387,6 +387,19 @@ hr {
   background-color: #e1e1e1;
 }
 
+button {
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #323232;
+  width: 100%;
+  color: #ffffff;
+  background-color: #323232;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  font-family: inherit;
+}
+
 .cover {
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/images/hero-bio.jpg) center/cover no-repeat;
   width: 100%;
@@ -784,18 +797,6 @@ hr {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
-}
-.comments__form-button {
-  height: 2.5rem;
-  border-radius: 0.25rem;
-  border: 1px solid #323232;
-  width: 100%;
-  color: #ffffff;
-  background-color: #323232;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 700;
-  font-family: inherit;
 }
 .comments__line {
   margin-left: 1rem;

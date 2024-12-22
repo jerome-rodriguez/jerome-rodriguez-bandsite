@@ -385,4 +385,88 @@ hr {
   background: none;
   height: 1px;
   background-color: #e1e1e1;
+}
+
+button {
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #323232;
+  width: 100%;
+  color: #ffffff;
+  background-color: #323232;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.cover {
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(/assets/images/hero-shows.jpg) center/cover no-repeat;
+  width: 100%;
+  height: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+  padding: 0%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.cover__album {
+  padding-bottom: 1.5rem;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.cover__song {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+.cover__soundcloud {
+  border-radius: 4px;
+  padding-top: 1.5rem;
+}
+
+.shows {
+  padding-bottom: 1rem;
+}
+.shows__heading {
+  color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+  padding-top: 1.5rem;
+}
+.shows__card {
+  padding: 1rem;
+}
+.shows__card-header {
+  color: #afafaf;
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.shows__card-date {
+  color: #323232;
+  padding-bottom: 1rem;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+}
+.shows__card-venue {
+  color: #323232;
+  padding-bottom: 1rem;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+.shows__card-location {
+  color: #323232;
+  padding-bottom: 1rem;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
 }/*# sourceMappingURL=shows.css.map */
