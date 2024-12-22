@@ -40,19 +40,31 @@
 @mixin button {
   height: 2.5rem;
   border-radius: 0.25rem; // double check if this is what is meant in style guide
+  border: 1px solid $bandsite-black;
   width: 100%;
+  color: $white;
+  background-color: $bandsite-black;
 
-  @include desktop {
-    width: 9.375rem;
-    padding: 0%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+  // @include desktop {
+  //   width: 9.375rem;
+  //   padding: 0%;
+  //   padding-left: 2rem;
+  //   padding-right: 2rem;
+  // }
 
-  @include tablet {
-    width: 9.375rem;
-    padding: 0%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
+  // @include tablet {
+  //   width: 9.375rem;
+  //   padding: 0%;
+  //   padding-left: 2rem;
+  //   padding-right: 2rem;
+  // }
+}
+
+// divider
+
+@mixin divider {
+  border: none;
+  background: none;
+  height: 1px;
+  background-color: $mercury;
 }

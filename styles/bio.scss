@@ -248,3 +248,134 @@
     }
   }
 }
+
+.comments {
+  &__img {
+    //picture doesn't match mockup
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 26px;
+  }
+
+  &__title {
+    color: $bandsite-black;
+
+    @include text-style(1.5rem, 2rem, 700);
+    @include padding-component($mobile-padding-top, $mobile-padding-sides);
+  }
+
+  &__article {
+    display: flex;
+    gap: $mobile-padding-sides;
+    @include padding-sides($mobile-padding-sides);
+    padding-bottom: $mobile-padding-sides;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+
+    &-label {
+      color: $silver;
+      @include text-style(10px, 20px, 700);
+      padding-bottom: 4px;
+    }
+
+    &-input {
+      height: 36px;
+      width: 100%;
+      border-radius: 4px;
+      padding: 12px;
+      border: 1px solid $mercury;
+      background-color: $alabaster;
+      margin-bottom: $mobile-padding-sides;
+
+      &::placeholder {
+        color: $bandsite-black;
+        @include text-style(13px, 18px, 400);
+      }
+    }
+
+    &-textarea {
+      resize: none;
+      height: 90px;
+      width: 100%;
+      border-radius: 4px;
+      padding: 12px;
+      border: 1px solid $mercury;
+      background-color: $alabaster;
+      font-family: inherit;
+      margin-bottom: $mobile-padding-sides;
+
+      &::placeholder {
+        color: $bandsite-black;
+        @include text-style(13px, 18px, 400);
+      }
+    }
+
+    &-button {
+      @include button;
+      @include text-style(14px, 22px, 700);
+      font-family: inherit;
+    }
+  }
+
+  &__line {
+    margin-left: $mobile-padding-sides;
+    margin-right: $mobile-padding-sides;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $mobile-padding-sides;
+    justify-content: space-between;
+    padding: $mobile-padding-sides;
+  }
+
+  &__card {
+    display: flex;
+    gap: $mobile-padding-sides;
+    justify-content: space-between;
+
+    &-ph {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $mercury;
+      background-image: url("");
+      flex-shrink: 0;
+    }
+
+    &-info {
+      &-personal {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: $mobile-padding-sides;
+
+        &-name {
+          color: $bandsite-black;
+          @include text-style(13px, 18px, 600);
+        }
+
+        &-time {
+          color: $silver;
+          @include text-style(13px, 18px, 400);
+        }
+      }
+
+      &-comment {
+        overflow-wrap: break-word;
+        word-wrap: break-word; // Legacy support for older browsers
+        word-break: break-word;
+
+        color: $bandsite-darkblack;
+
+        @include text-style(13px, 18px, 400);
+      }
+    }
+  }
+}

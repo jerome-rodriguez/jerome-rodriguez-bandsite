@@ -3,19 +3,19 @@
 const defaultComments = [
   {
     name: "Victor Pinto",
-    date: "11/02/2023",
+    time: "11/02/2023",
     comment:
       "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
   },
   {
     name: "Christina Cabrera",
-    date: "10/28/2023",
+    time: "10/28/2023",
     comment:
       "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
   },
   {
     name: "Isaac Tadesse",
-    date: "10/20/2023",
+    time: "10/20/2023",
     comment:
       "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
@@ -27,29 +27,43 @@ function createCommentCard(comment) {
   const cardElement = document.createElement("article");
   cardElement.classList.add("comments__card");
 
+  const imgElement = document.createElement("div");
+  imgElement.classList.add("comments__card-ph");
+
+  const infoElement = document.createElement("div");
+  infoElement.classList.add("comments__card-info");
+
+  const personalElement = document.createElement("div");
+  personalElement.classList.add("comments__card-info-personal");
+
   const nameElement = document.createElement("p");
-  nameElement.classList.add("comments__name");
+  nameElement.classList.add("comments__card-info-personal-name");
   nameElement.innerText = comment.name;
 
-  const dateElement = document.createElement("span");
-  dateElement.classList.add("comments__date");
-  dateElement.innerText = comment.date;
+  const timeElement = document.createElement("p");
+  timeElement.classList.add("comments__card-info-personal-time");
+  timeElement.innerText = comment.time;
 
   const commentElement = document.createElement("p");
-  commentElement.classList.add("comments__comment");
+  commentElement.classList.add("comments__card-info-comment");
   commentElement.innerText = comment.comment;
 
-  cardElement.appendChild(nameElement);
-  cardElement.appendChild(dateElement);
-  cardElement.appendChild(commentElement);
+  personalElement.appendChild(nameElement);
+  personalElement.appendChild(timeElement);
+
+  infoElement.appendChild(personalElement);
+  infoElement.appendChild(commentElement);
+
+  cardElement.appendChild(imgElement);
+  cardElement.appendChild(infoElement);
 
   console.log(cardElement);
   return cardElement;
 }
 
-createCommentCard({ name: "Bill", date: "12/19/2024", comment: "text 1" });
-createCommentCard({ name: "John", date: "12/24/2024", comment: "text 2" });
-createCommentCard({ name: "Sarah", date: "12/12/2024", comment: "text 3" });
+createCommentCard({ name: "Bill", time: "12/19/2024", comment: "text 1" });
+createCommentCard({ name: "John", time: "12/24/2024", comment: "text 2" });
+createCommentCard({ name: "Sarah", time: "12/12/2024", comment: "text 3" });
 
 //function to create HTML for horizontal line
 
@@ -59,6 +73,15 @@ function createLine() {
 
   return lineElement;
 }
+
+//function to create img placeholder
+
+// function createImg() {
+//   const imgElement = document.createElement("div");
+//   imgElement.classList.add("comments__ph");
+
+//   return imgElement;
+// }
 
 // 3. function to render HTML to browser
 
@@ -70,7 +93,9 @@ const renderCommentCards = () => {
   for (let i = 0; i < defaultComments.length; i++) {
     const card = createCommentCard(defaultComments[i]);
     const line = createLine();
+    // const image = createImg();
 
+    // myCommentEl.appendChild(image);
     myCommentEl.appendChild(card);
     myCommentEl.appendChild(line);
   }
@@ -89,11 +114,9 @@ function submitHandler(event) {
 
   let cardData = {
     name: event.target.name.value,
-    date: event.target.date.value,
+    time: event.target.time.value,
     comment: event.target.comment.value,
   };
-
-  defaultComments.push(cardData);
 
   defaultComments.unshift(cardData);
 
@@ -104,7 +127,7 @@ function submitHandler(event) {
 
 // 5. hidden date input
 
-const hiddenInput = document.getElementById("date");
+const hiddenInput = document.getElementById("time");
 const currentDate = new Date();
 
 // Extract month, day, and year

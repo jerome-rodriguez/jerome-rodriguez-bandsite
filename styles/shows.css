@@ -383,4 +383,11 @@ body {
     padding-top: 4.5rem;
     padding-left: 8rem;
   }
+}
+
+hr {
+  border: none;
+  background: none;
+  height: 1px;
+  background-color: #e1e1e1;
 }/*# sourceMappingURL=shows.css.map */

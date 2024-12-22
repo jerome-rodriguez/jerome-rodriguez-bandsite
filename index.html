@@ -120,43 +120,44 @@
       <!--join the conversation-->
       <section class="comments">
         <h2 class="comments__title">Join the Conversation</h2>
-
-        <img
-          class="comments__article-img"
-          src="/assets/images/Mohan-muruge.jpg"
-          alt="profile pic"
-        />
-        <form class="comments__form" id="form" name="form">
-          <label
-            class="comments__form-label"
-            for="name"
-            placeholder="Enter your name"
-            >NAME</label
-          >
-          <input
-            class="comments__form-input"
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Enter your name"
+        <article class="comments__article">
+          <img
+            class="comments__img"
+            src="/assets/images/Mohan-muruge.jpg"
+            alt="profile pic"
           />
+          <form class="comments__form" id="form" name="form">
+            <label
+              class="comments__form-label"
+              for="name"
+              placeholder="Enter your name"
+              >NAME</label
+            >
+            <input
+              class="comments__form-input"
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
 
-          <input
-            class="comments__form-date"
-            type="hidden"
-            name="date"
-            id="date"
-            value=""
-          />
-          <label class="comments__form-label" for="comment">COMMENT</label>
-          <textarea
-            class="comments__form-textarea"
-            name="comment"
-            id="comment"
-            placeholder="Add a new comment"
-          ></textarea>
-          <button type="submit" class="comments__form-button">COMMENT</button>
-        </form>
+            <input
+              class="comments__form-date"
+              type="hidden"
+              name="time"
+              id="time"
+              value=""
+            />
+            <label class="comments__form-label" for="comment">COMMENT</label>
+            <textarea
+              class="comments__form-textarea"
+              name="comment"
+              id="comment"
+              placeholder="Add a new comment"
+            ></textarea>
+            <button class="comments__form-button">COMMENT</button>
+          </form>
+        </article>
         <hr class="comments__line" />
 
         <div class="comments__list">

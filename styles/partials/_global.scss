@@ -340,3 +340,7 @@ body {
     }
   }
 }
+
+hr {
+  @include divider;
+}
