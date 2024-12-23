@@ -21,107 +21,62 @@ body {
   @include padding-component($mobile-padding-sides, 0px);
 
   @include tablet {
-    padding: 0%;
+    padding: 0px;
   }
 
-  @include desktop {
-    padding: 0%;
-  }
-}
-
-.nav {
-  @include tablet {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  @include desktop {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  &__logo-link {
+  &__nav {
     @include tablet {
-      padding: $dt-padding-sides;
-    }
-
-    @include desktop {
-      padding: $dt-padding-sides;
-      padding-left: $desktop-padding-sides;
-    }
-  }
-
-  &__logo-img {
-    height: 1.25rem;
-    width: 7.5rem;
-
-    display: flex;
-    justify-self: center;
-  }
-
-  &__list {
-    list-style-type: none;
-    display: flex;
-
-    padding-top: $mobile-padding-sides;
-    justify-content: space-around;
-
-    @include tablet {
+      display: flex;
       justify-content: flex-start;
+      align-items: center;
     }
-
-    @include desktop {
-      justify-content: flex-start;
-    }
-
-    &-item {
-      text-align: center;
-      width: 100%;
-      padding-bottom: $mobile-padding-sides;
-
-      @include tablet {
-        padding: $dt-padding-sides;
-      }
-
-      @include desktop {
-        padding: $dt-padding-sides;
-      }
-
-      &:active {
-        color: $white;
-        border-bottom: 0.25rem solid $white;
-        font-weight: 700;
-      }
-
-      &:hover {
-        color: $white;
-        border-bottom: 0.25rem solid $white;
-      }
-    }
-
-    // FIX: underline and text colour don't change together at hover!
-
     &-link {
-      color: $mercury;
-      text-decoration: none;
-
-      @include text-style(0.8125rem, 1.125rem, 400);
+      display: flex;
+      justify-content: center;
 
       @include tablet {
-        @include text-style(0.875rem, 1.375rem, 400);
+        @include padding-sides($dt-padding-sides);
       }
 
-      @include desktop {
-        @include text-style(0.875rem, 1.375rem, 400);
+      &-img {
+        width: 7.5rem;
+        height: 1.25rem;
+        text-align: center;
       }
+    }
+    &-ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding-top: $mobile-padding-sides;
 
-      &:active {
-        color: $white;
-        font-weight: 700;
-      }
+      &-item {
+        color: $mercury;
+        border-bottom: 0.125rem solid transparent;
 
-      &:hover {
-        color: $white;
+        @include tablet {
+          @include padding-sides($dt-padding-sides);
+        }
+
+        &-link {
+          color: $mercury;
+          text-decoration: none;
+          border-bottom: 0.125rem solid transparent;
+          padding-bottom: 0.875rem;
+          display: block;
+
+          &:hover {
+            color: $white;
+            border-color: $white;
+          }
+
+          &:active,
+          &:focus {
+            color: $white;
+            font-weight: 700;
+            border-color: $white;
+          }
+        }
       }
     }
   }
@@ -131,6 +86,10 @@ body {
   background-color: $bandsite-black;
   color: $white;
 
+  @include tablet {
+    @include padding-sides($dt-padding-sides);
+  }
+
   &__heading {
     @include tablet {
       display: flex;
@@ -138,6 +97,8 @@ body {
       align-items: baseline;
 
       @include padding-component($dt-padding-top, $dt-padding-sides);
+      padding-left: 0%;
+      padding-right: 0%;
     }
 
     @include desktop {
@@ -167,6 +128,7 @@ body {
 
       @include tablet {
         @include text-style(2.25rem, 2.75rem, 700);
+        padding-left: 0%;
       }
 
       @include desktop {
@@ -187,6 +149,12 @@ body {
 
       @include desktop {
         @include padding-sides($dt-padding-sides);
+      }
+
+      &-ig {
+        @include tablet {
+          padding-left: calc(2.25rem * 2);
+        }
       }
 
       &--facebook {
@@ -240,6 +208,8 @@ body {
         @include tablet {
           font-weight: 700;
           @include padding-component(0px, $dt-padding-sides);
+          padding-left: 0%;
+          padding-right: 0%;
         }
 
         @include desktop {
@@ -259,7 +229,9 @@ body {
         @include padding-sides($mobile-padding-sides);
 
         @include tablet {
-          @include padding-component(0px, $dt-padding-sides);
+          @include padding-sides($dt-padding-sides);
+          padding-left: 0%;
+          padding-right: 0%;
         }
 
         @include desktop {
@@ -274,6 +246,14 @@ body {
 
         &-2 {
           @include padding-component(0px, $mobile-padding-sides);
+
+          @include tablet {
+            padding: 0%;
+            @include padding-sides($dt-padding-sides);
+            padding-bottom: $dt-padding-sides;
+            padding-left: 0%;
+            padding-right: 0%;
+          }
         }
       }
 
@@ -286,6 +266,8 @@ body {
 
         @include tablet {
           @include padding-component(0px, $dt-padding-sides);
+          padding-left: 0%;
+          padding-right: 0%;
         }
 
         @include desktop {
@@ -317,7 +299,7 @@ body {
   }
 
   &__copyright {
-    @include text-style(11px, 18px, 400);
+    @include text-style(0.6875rem, 1.125rem, 400);
     @include padding-sides($mobile-padding-sides);
     padding-bottom: $mobile-padding-top;
 
@@ -327,6 +309,7 @@ body {
         calc($dt-padding-sides * 2),
         $dt-padding-sides
       );
+      padding-left: 0%;
     }
 
     @include desktop {
@@ -347,6 +330,11 @@ hr {
 
 button {
   @include button;
-  @include text-style(14px, 22px, 700);
+  @include text-style(0.875rem, 1.375rem, 700);
   font-family: inherit;
+
+  &:hover {
+    border: 0.0625rem solid $bandsite-darkblack;
+    background-color: $bandsite-darkblack;
+  }
 }

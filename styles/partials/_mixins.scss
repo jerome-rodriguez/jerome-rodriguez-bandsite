@@ -40,7 +40,7 @@
 @mixin button {
   height: 2.5rem;
   border-radius: 0.25rem; // double check if this is what is meant in style guide
-  border: 1px solid $bandsite-black;
+  border: 0.0625rem solid $bandsite-black;
   width: 100%;
   color: $white;
   background-color: $bandsite-black;
@@ -65,6 +65,6 @@
 @mixin divider {
   border: none;
   background: none;
-  height: 1px;
+  height: 0.0625rem;
   background-color: $mercury;
 }

@@ -29,19 +29,13 @@
     color: white;
 
     @include text-style(1.5rem, 2rem, 700);
-    padding-top: 5rem;
-    padding-bottom: 5rem;
 
     @include tablet {
       @include text-style(3.75rem, 4.25rem, 700);
-      padding-top: 11.25rem;
-      padding-bottom: 11.25rem;
     }
 
     @include desktop {
       @include text-style(3.75rem, 4.25rem, 700);
-      padding-top: 35rem;
-      padding-bottom: 35rem;
     }
   }
 }
@@ -172,7 +166,9 @@
       @include padding-component($mobile-padding-sides, $mobile-padding-sides);
 
       @include tablet {
-        padding-right: 4rem;
+        padding-left: 0px;
+        padding-top: 0%;
+        padding-bottom: 0%;
       }
 
       @include desktop {
@@ -182,7 +178,12 @@
 
     &-right {
       @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-      // will need @incluce tablet and @include desktop ?? if padding above not needed or want smthn different
+
+      @include tablet {
+        padding-right: 0px;
+        padding-top: 0%;
+        padding-bottom: 0%;
+      }
     }
   }
 }
@@ -235,6 +236,7 @@
 
     @include tablet {
       width: 100%;
+      padding: 0px;
     }
 
     @include desktop {
@@ -250,13 +252,16 @@
 }
 
 .comments {
+  @include tablet {
+    @include padding-sides($dt-padding-sides);
+  }
   &__img {
     //picture doesn't match mockup
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 26px;
+    margin-top: 1.625rem;
   }
 
   &__title {
@@ -264,6 +269,10 @@
 
     @include text-style(1.5rem, 2rem, 700);
     @include padding-component($mobile-padding-top, $mobile-padding-sides);
+
+    @include tablet {
+      @include text-style(2.25rem, 2.75rem, 700);
+    }
   }
 
   &__article {
@@ -271,6 +280,11 @@
     gap: $mobile-padding-sides;
     @include padding-sides($mobile-padding-sides);
     padding-bottom: $mobile-padding-sides;
+
+    @include tablet {
+      @include padding-sides(calc($dt-padding-sides * 2));
+      padding-bottom: 1.125rem;
+    }
   }
 
   &__form {
@@ -280,52 +294,74 @@
 
     &-label {
       color: $silver;
-      @include text-style(10px, 20px, 700);
-      padding-bottom: 4px;
+      @include text-style(0.625rem, 1.25rem, 700);
+      padding-bottom: 0.25rem;
     }
 
     &-input {
-      height: 36px;
+      height: 2.25rem;
       width: 100%;
-      border-radius: 4px;
-      padding: 12px;
-      border: 1px solid $mercury;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      border: 0.0625rem solid $mercury;
       background-color: $alabaster;
       margin-bottom: $mobile-padding-sides;
 
       &::placeholder {
         color: $bandsite-black;
-        @include text-style(13px, 18px, 400);
+        @include text-style(0.8125rem, 1.125rem, 400);
+      }
+
+      &:active {
+        border: 0.0625rem solid $bandsite-black;
+      }
+
+      &:invalid {
+        border: 0.0625rem solid #d22d2d;
       }
     }
 
     &-textarea {
       resize: none;
-      height: 90px;
+      height: 5.625rem;
       width: 100%;
-      border-radius: 4px;
-      padding: 12px;
-      border: 1px solid $mercury;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      border: 0.0625rem solid $mercury;
       background-color: $alabaster;
       font-family: inherit;
       margin-bottom: $mobile-padding-sides;
 
       &::placeholder {
         color: $bandsite-black;
-        @include text-style(13px, 18px, 400);
+        @include text-style(0.8125rem, 1.125rem, 400);
+      }
+
+      &:active {
+        border: 0.0625rem solid $bandsite-black;
+      }
+
+      &:invalid {
+        border: 0.0625rem solid #d22d2d;
       }
     }
 
-    // &-button {
-    //   @include button;
-    //   @include text-style(14px, 22px, 700);
-    //   font-family: inherit;
-    // }
+    &-button {
+      @include tablet {
+        width: calc(100% / 3);
+        margin-left: auto;
+      }
+    }
   }
 
   &__line {
     margin-left: $mobile-padding-sides;
     margin-right: $mobile-padding-sides;
+
+    @include tablet {
+      margin-left: calc($dt-padding-sides * 2);
+      margin-right: calc($dt-padding-sides * 2);
+    }
   }
 
   &__list {
@@ -334,6 +370,14 @@
     gap: $mobile-padding-sides;
     justify-content: space-between;
     padding: $mobile-padding-sides;
+
+    @include tablet {
+      gap: 1.125rem;
+      padding: $dt-padding-sides;
+      padding-left: calc($dt-padding-sides * 2);
+      padding-right: calc($dt-padding-sides * 2);
+      padding-top: 1.125rem;
+    }
   }
 
   &__card {
@@ -342,8 +386,8 @@
     justify-content: space-between;
 
     &-ph {
-      width: 36px;
-      height: 36px;
+      width: 2.25rem;
+      height: 2.25rem;
       border-radius: 50%;
       background-color: $mercury;
       background-image: url("");
@@ -358,12 +402,12 @@
 
         &-name {
           color: $bandsite-black;
-          @include text-style(13px, 18px, 600);
+          @include text-style(0.8125rem, 1.125rem, 600);
         }
 
         &-time {
           color: $silver;
-          @include text-style(13px, 18px, 400);
+          @include text-style(0.8125rem, 1.125rem, 400);
         }
       }
 
@@ -374,7 +418,7 @@
 
         color: $bandsite-darkblack;
 
-        @include text-style(13px, 18px, 400);
+        @include text-style(0.8125rem, 1.125rem, 400);
       }
     }
   }
