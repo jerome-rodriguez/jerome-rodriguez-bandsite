@@ -383,7 +383,7 @@
   &__card {
     display: flex;
     gap: $mobile-padding-sides;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     &-ph {
       width: 2.25rem;
@@ -395,19 +395,22 @@
     }
 
     &-info {
+      width: 100%;
+
       &-personal {
         display: flex;
         justify-content: space-between;
         padding-bottom: $mobile-padding-sides;
 
+        &-time {
+          justify-self: flex-end;
+          color: $silver;
+          @include text-style(0.8125rem, 1.125rem, 400);
+        }
+
         &-name {
           color: $bandsite-black;
           @include text-style(0.8125rem, 1.125rem, 600);
-        }
-
-        &-time {
-          color: $silver;
-          @include text-style(0.8125rem, 1.125rem, 400);
         }
       }
 

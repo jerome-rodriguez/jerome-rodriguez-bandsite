@@ -120,7 +120,32 @@ const renderShowsCards = () => {
   header.classList.add("shows__heading");
   header.innerText = "Shows";
 
+  const headerDiv = document.createElement("div");
+  headerDiv.classList.add("shows__header");
+
+  const dateHeader = document.createElement("h4");
+  dateHeader.classList.add("shows__header-date");
+  dateHeader.innerText = "DATE";
+
+  const venueHeader = document.createElement("h4");
+  venueHeader.classList.add("shows__header-venue");
+  venueHeader.innerText = "VENUE";
+
+  const locationHeader = document.createElement("h4");
+  locationHeader.classList.add("shows__header-location");
+  locationHeader.innerText = "LOCATION";
+
+  const buttonElement = document.createElement("button");
+  buttonElement.classList.add("shows__header-button");
+  buttonElement.innerText = "BUY TICKETS";
+
+  headerDiv.appendChild(dateHeader);
+  headerDiv.appendChild(venueHeader);
+  headerDiv.appendChild(locationHeader);
+  headerDiv.appendChild(buttonElement);
+
   myShowsEl.appendChild(header);
+  myShowsEl.appendChild(headerDiv);
 
   for (let i = 0; i < shows.length; i++) {
     const card = createShowCard(shows[i]);

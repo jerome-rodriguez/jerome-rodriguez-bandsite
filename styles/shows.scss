@@ -91,6 +91,14 @@
     &-header {
       color: $silver;
       @include text-style(0.625rem, 1.25rem, 700);
+
+      @include tablet {
+        display: none;
+      }
+
+      @include desktop {
+        display: none;
+      }
     }
 
     &-date {
@@ -98,6 +106,10 @@
       padding-bottom: $mobile-padding-sides;
 
       @include text-style(0.8125rem, 1.125rem, 700);
+
+      @include tablet {
+        flex: 1;
+      }
     }
 
     &-venue {
@@ -105,18 +117,68 @@
       padding-bottom: $mobile-padding-sides;
 
       @include text-style(0.8125rem, 1.125rem, 400);
+
+      @include tablet {
+        flex: 1;
+      }
     }
 
     &-location {
       color: $bandsite-black;
       padding-bottom: $mobile-padding-sides;
       @include text-style(0.8125rem, 1.125rem, 400);
+
+      @include tablet {
+        flex: 1;
+      }
     }
 
     &-button {
       @include tablet {
-        width: 20%;
+        width: 15%;
+        flex: 1;
       }
+    }
+  }
+
+  &__header {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      color: $silver;
+      justify-content: space-between;
+
+      @include padding-sides($mobile-padding-sides);
+    }
+
+    &-date {
+      @include tablet {
+        flex: 1;
+      }
+    }
+
+    &-venue {
+      @include tablet {
+        flex: 1;
+      }
+    }
+
+    &-location {
+      @include tablet {
+        flex: 1;
+      }
+    }
+
+    &-button {
+      @include tablet {
+        visibility: hidden;
+        width: 15%;
+        flex: 1;
+      }
+    }
+
+    @include desktop {
     }
   }
 }

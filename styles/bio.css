@@ -862,7 +862,7 @@ button:hover {
 .comments__card {
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .comments__card-ph {
   width: 2.25rem;
@@ -872,22 +872,26 @@ button:hover {
   background-image: url("");
   flex-shrink: 0;
 }
+.comments__card-info {
+  width: 100%;
+}
 .comments__card-info-personal {
   display: flex;
   justify-content: space-between;
   padding-bottom: 1rem;
+}
+.comments__card-info-personal-time {
+  justify-self: flex-end;
+  color: #afafaf;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
 }
 .comments__card-info-personal-name {
   color: #323232;
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-weight: 600;
-}
-.comments__card-info-personal-time {
-  color: #afafaf;
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
 }
 .comments__card-info-comment {
   overflow-wrap: break-word;
