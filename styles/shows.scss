@@ -4,6 +4,7 @@
 @use "./partials/fonts" as *;
 
 .cover {
+  padding: 0px 16px;
   background: linear-gradient(
       rgba($bandsite-black, 0.5),
       rgba($bandsite-black, 0.5)
@@ -17,168 +18,147 @@
   align-items: flex-start;
   color: $white;
 
-  @include padding-sides($mobile-padding-sides);
-
-  @include tablet {
-    @include padding-sides($dt-padding-sides);
-    height: 65vw;
-  }
-
   &__album {
-    padding-bottom: $mobile-padding-top;
-    @include text-style(0.875rem, 1.375rem, 400);
-
-    @include tablet {
-      @include text-style(2.25rem, 2.75rem, 700);
-    }
+    padding-bottom: 16px;
+    @include text-style(14px, 22px, 400);
   }
 
   &__song {
-    @include text-style(1.5rem, 2rem, 700);
-
-    @include tablet {
-      @include text-style(3.75rem, 4.25rem, 700);
-    }
+    @include text-style(24px, 32px, 700);
   }
 
   &__soundcloud {
-    border-radius: 0.25rem;
-    padding-top: $mobile-padding-top;
-
-    @include tablet {
-      padding-top: $dt-padding-sides;
-      width: 60%;
-    }
+    border-radius: 4px;
+    padding-top: 16px;
   }
 }
 
 .shows {
-  padding-bottom: $mobile-padding-sides;
+  padding: 24px 0px 16px;
 
-  @include tablet {
-    @include padding-component($dt-padding-top, $dt-padding-sides);
-  }
-
-  &__heading {
+  &__title {
     color: $bandsite-black;
+    padding-left: 16px;
 
     @include text-style(1.5rem, 2rem, 700);
-    @include padding-component($mobile-padding-top, $mobile-padding-sides);
-
-    @include tablet {
-      padding: 0%;
-      padding-bottom: $dt-padding-sides;
-      @include text-style(2.25rem, 2.75rem, 700);
-    }
   }
 
-  &__card {
-    padding: $mobile-padding-sides;
-
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &:hover {
-      background-color: $alabaster;
-    }
-
-    &:active {
-      background-color: $mercury;
-    }
-
-    &-header {
-      color: $silver;
-      @include text-style(0.625rem, 1.25rem, 700);
-
-      @include tablet {
-        display: none;
-      }
-
-      @include desktop {
-        display: none;
-      }
-    }
-
-    &-date {
-      color: $bandsite-black;
-      padding-bottom: $mobile-padding-sides;
-
-      @include text-style(0.8125rem, 1.125rem, 700);
-
-      @include tablet {
-        flex: 1;
-      }
-    }
-
-    &-venue {
-      color: $bandsite-black;
-      padding-bottom: $mobile-padding-sides;
-
-      @include text-style(0.8125rem, 1.125rem, 400);
-
-      @include tablet {
-        flex: 1;
-      }
-    }
-
-    &-location {
-      color: $bandsite-black;
-      padding-bottom: $mobile-padding-sides;
-      @include text-style(0.8125rem, 1.125rem, 400);
-
-      @include tablet {
-        flex: 1;
-      }
-    }
-
-    &-button {
-      @include tablet {
-        width: 15%;
-        flex: 1;
-      }
-    }
+  &__line {
+    border: none;
+    background: none;
+    height: 1px;
+    background-color: $mercury;
   }
 
   &__header {
     display: none;
 
-    @include tablet {
-      display: flex;
-      color: $silver;
-      justify-content: space-between;
+    // @include tablet {
+    //   display: flex;
+    //   color: $silver;
+    //   justify-content: space-between;
 
-      @include padding-sides($mobile-padding-sides);
+    // }
+  }
+  &__header-date {
+    //   @include tablet {
+    //     flex: 1;
+    //   }
+  }
+
+  &__header-venue {
+    //   @include tablet {
+    //     flex: 1;
+    //   }
+  }
+
+  &__header-location {
+    //   @include tablet {
+    //     flex: 1;
+    //   }
+  }
+
+  &__header-button {
+    //   @include tablet {
+    //     visibility: hidden;
+    //     width: 15%;
+    //     flex: 1;
+    //   }
+  }
+}
+
+.shows-card {
+  padding: 16px;
+
+  &:hover {
+    background-color: $alabaster;
+  }
+
+  &:active {
+    background-color: $mercury;
+  }
+
+  &__header {
+    color: $silver;
+    @include text-style(10px, 20px, 700);
+
+    //   @include tablet {
+    //     display: none;
+    //   }
+
+    //   @include desktop {
+    //     display: none;
+    //   }
+  }
+
+  &__date {
+    color: $bandsite-black;
+    padding-bottom: 16px;
+    @include text-style(13px, 18px, 700);
+
+    //   @include tablet {
+    //     flex: 1;
+    //   }
+  }
+
+  &__venue {
+    color: $bandsite-black;
+    padding-bottom: 16px;
+    @include text-style(13px, 18px, 400);
+
+    //   @include tablet {
+    //     flex: 1;
+    //   }
+  }
+
+  &__location {
+    color: $bandsite-black;
+    padding-bottom: 16px;
+    @include text-style(13px, 18px, 400);
+
+    //   @include tablet {
+    //     flex: 1;
+    //   }
+  }
+
+  &__button {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid $bandsite-black;
+    width: 100%;
+    color: $white;
+    background-color: $bandsite-black;
+    @include text-style(14px, 22px, 600);
+    font-family: inherit;
+
+    &:hover {
+      border: 1px solid $bandsite-darkblack;
+      background-color: $bandsite-darkblack;
     }
 
-    &-date {
-      @include tablet {
-        flex: 1;
-      }
-    }
-
-    &-venue {
-      @include tablet {
-        flex: 1;
-      }
-    }
-
-    &-location {
-      @include tablet {
-        flex: 1;
-      }
-    }
-
-    &-button {
-      @include tablet {
-        visibility: hidden;
-        width: 15%;
-        flex: 1;
-      }
-    }
-
-    @include desktop {
-    }
+    //   @include tablet {
+    //     width: 15%;
+    //     flex: 1;
+    //   }
   }
 }

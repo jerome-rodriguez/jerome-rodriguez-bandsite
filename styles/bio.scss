@@ -15,233 +15,85 @@
   justify-content: flex-start;
   align-items: center;
 
-  @include padding-sides($mobile-padding-sides);
-
-  @include tablet {
-    @include padding-sides($dt-padding-sides);
-  }
-
-  @include desktop {
-    @include padding-sides($desktop-padding-sides);
-  }
-
   &__title {
     color: white;
+    padding-left: 16px;
 
-    @include text-style(1.5rem, 2rem, 700);
-
-    @include tablet {
-      @include text-style(3.75rem, 4.25rem, 700);
-    }
-
-    @include desktop {
-      @include text-style(3.75rem, 4.25rem, 700);
-    }
+    @include text-style(24px, 32px, 700);
   }
 }
 
 .about {
+  color: $bandsite-black;
+  padding: 24px 16px 16px;
+
   &__title {
-    color: $bandsite-black;
-
-    @include text-style(1.5rem, 2rem, 700);
-    @include padding-component($mobile-padding-top, $mobile-padding-sides);
-
-    @include tablet {
-      @include text-style(2.25rem, 2.75rem, 700);
-      @include padding-component($dt-padding-top, $dt-padding-sides);
-    }
-
-    @include desktop {
-      @include text-style(2.25rem, 2.75rem, 700);
-      @include padding-component($dt-padding-top, $desktop-padding-sides);
-      padding-bottom: $dt-padding-sides;
-    }
+    @include text-style(24px, 32px, 700);
   }
 
   &__img {
     width: 100%;
     height: auto;
-    @include padding-component(0px, $mobile-padding-sides);
-
-    @include tablet {
-      width: 100%;
-      height: auto;
-      @include padding-sides(6.25rem);
-      padding-bottom: $dt-padding-sides;
-    }
-
-    @include desktop {
-      width: 100%;
-      height: auto;
-      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-      padding-bottom: $dt-padding-sides;
-    }
+    padding: 16px 0px;
   }
 
   &__quote {
-    color: $bandsite-black;
-
-    @include text-style(0.875rem, 1.375rem, 600);
-    @include padding-sides($mobile-padding-sides);
-
-    @include tablet {
-      @include text-style(1.5rem, 2rem, 700);
-      @include padding-sides(6.25rem);
-    }
-
-    @include desktop {
-      @include text-style(1.5rem, 2rem, 700);
-      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-    }
+    @include text-style(14px, 22px, 700);
   }
 
   &__quote-source {
-    color: $bandsite-black;
-
-    @include text-style(0.875rem, 1.375rem, 600);
-    @include padding-component(0px, $mobile-padding-sides);
-
-    @include tablet {
-      @include text-style(0.875rem, 1.375rem, 700);
-      @include padding-sides(6.25rem);
-      padding-top: 0.5rem;
-    }
-
-    @include desktop {
-      @include text-style(0.875rem, 1.375rem, 700);
-      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-      padding-top: 1rem;
-    }
+    padding-top: 8px;
+    @include text-style(14px, 22px, 700);
   }
 
   &__band-name {
-    color: $bandsite-darkblack;
-
-    @include text-style(0.8125rem, 1.125rem, 400);
-    @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-    padding-bottom: 0%;
-
-    @include tablet {
-      @include text-style(1.5rem, 2rem, 500);
-      @include padding-sides(6.25rem);
-      padding-top: $dt-padding-top;
-      padding-bottom: $dt-padding-sides;
-    }
-
-    @include desktop {
-      @include text-style(1.5rem, 2rem, 500);
-      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-      padding-top: $dt-padding-top;
-      padding-bottom: $dt-padding-sides;
-    }
+    padding: 32px 0px 16px;
+    @include text-style(14px, 22px, 600);
   }
 
-  &__band-bio {
-    color: $bandsite-black;
+  &__band-p1 {
+    @include text-style(13px, 18px, 400);
+  }
 
-    @include text-style(0.8125rem, 1.125rem, 400);
-
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-
-      @include text-style(0.875rem, 1.375rem, 400);
-      @include padding-sides(6.25rem);
-
-      padding-bottom: $dt-padding-sides;
-    }
-
-    @include desktop {
-      display: flex;
-      justify-content: space-between;
-
-      @include text-style(0.875rem, 1.375rem, 400);
-      @include padding-sides(calc($desktop-padding-sides + 6.25rem));
-
-      padding-bottom: $dt-padding-sides;
-    }
-
-    &-left {
-      @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-
-      @include tablet {
-        padding-left: 0px;
-        padding-top: 0%;
-        padding-bottom: 0%;
-      }
-
-      @include desktop {
-        padding-right: 1.5rem;
-      }
-    }
-
-    &-right {
-      @include padding-component($mobile-padding-sides, $mobile-padding-sides);
-
-      @include tablet {
-        padding-right: 0px;
-        padding-top: 0%;
-        padding-bottom: 0%;
-      }
-    }
+  &__band-p2 {
+    padding-top: 32px;
+    @include text-style(13px, 18px, 400);
   }
 }
 
 .photos {
   background-color: $alabaster;
+  padding: 24px 16px 16px;
 
   &__title {
     color: $bandsite-black;
 
-    @include text-style(1.5rem, 2rem, 700);
-    @include padding-component($mobile-padding-top, $mobile-padding-sides);
-
-    @include tablet {
-      @include text-style(2.25rem, 2.75rem, 700);
-      @include padding-component($dt-padding-top, $dt-padding-sides);
-    }
-
-    @include desktop {
-      @include text-style(2.25rem, 2.75rem, 700);
-      @include padding-component($dt-padding-top, $desktop-padding-sides);
-      padding-bottom: $dt-padding-sides;
-    }
+    @include text-style(24px, 32px, 700);
   }
 
-  &__grid {
-    @include tablet {
-      @include padding-component(0px, $dt-padding-sides);
+  //   &__grid {
+  //     @include tablet {
+  //       @include padding-component(0px, $dt-padding-sides);
 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
+  //       display: grid;
+  //       grid-template-columns: repeat(3, 1fr);
+  //       gap: 1.5rem;
+  //     }
 
-    @include desktop {
-      @include padding-component(0px, $desktop-padding-sides);
-      padding-bottom: $dt-padding-sides;
+  //     @include desktop {
+  //       @include padding-component(0px, $desktop-padding-sides);
+  //       padding-bottom: $dt-padding-sides;
 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-  }
+  //       display: grid;
+  //       grid-template-columns: repeat(3, 1fr);
+  //       gap: 1.5rem;
+  //     }
+  //   }
 
   &__card-img {
-    @include padding-component(0px, $mobile-padding-sides);
-
-    display: block;
+    display: flex;
     width: 100%;
-
-    @include tablet {
-      width: 100%;
-      padding: 0px;
-    }
-
-    @include desktop {
-      width: 100%;
-    }
+    padding-top: 16px;
 
     filter: grayscale(100%);
 
@@ -251,178 +103,168 @@
   }
 }
 
-.comments {
-  @include tablet {
-    @include padding-sides($dt-padding-sides);
-  }
-  &__img {
-    //picture doesn't match mockup
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-top: 1.625rem;
-  }
+// double check comments section styling before submitting - Jan 10, 2025
 
+.comments {
+  padding: 24px 16px 0px;
   &__title {
     color: $bandsite-black;
 
-    @include text-style(1.5rem, 2rem, 700);
-    @include padding-component($mobile-padding-top, $mobile-padding-sides);
-
-    @include tablet {
-      @include text-style(2.25rem, 2.75rem, 700);
-    }
+    @include text-style(24px, 32px, 700);
   }
 
-  &__article {
-    display: flex;
-    gap: $mobile-padding-sides;
-    @include padding-sides($mobile-padding-sides);
-    padding-bottom: $mobile-padding-sides;
+  &__line {
+    border: none;
+    background: none;
+    height: 1px;
+    background-color: $mercury;
+  }
 
-    @include tablet {
-      @include padding-sides(calc($dt-padding-sides * 2));
-      padding-bottom: 1.125rem;
-    }
+  &__default {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    padding: 16px 0px;
+  }
+}
+
+.comments-article {
+  padding-bottom: 16px;
+  display: flex;
+  gap: 16px;
+
+  &__img {
+    //picture doesn't match mockup
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 26px;
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     flex-grow: 2;
+  }
 
-    &-label {
-      color: $silver;
-      @include text-style(0.625rem, 1.25rem, 700);
-      padding-bottom: 0.25rem;
+  &__label {
+    color: $silver;
+    padding-bottom: 4px;
+    @include text-style(10px, 20px, 700);
+  }
+
+  &__input {
+    height: 36px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid $mercury;
+    background-color: $alabaster;
+    margin-bottom: 16px;
+
+    &::placeholder {
+      color: $bandsite-black;
+      @include text-style(13px, 18px, 400);
     }
 
-    &-input {
-      height: 2.25rem;
-      width: 100%;
-      border-radius: 0.25rem;
-      padding: 0.75rem;
-      border: 0.0625rem solid $mercury;
-      background-color: $alabaster;
-      margin-bottom: $mobile-padding-sides;
-
-      &::placeholder {
-        color: $bandsite-black;
-        @include text-style(0.8125rem, 1.125rem, 400);
-      }
-
-      &:active {
-        border: 0.0625rem solid $bandsite-black;
-      }
-
-      &:invalid {
-        border: 0.0625rem solid #d22d2d;
-      }
+    &:active {
+      border: 1px solid $bandsite-black;
     }
 
-    &-textarea {
-      resize: none;
-      height: 5.625rem;
-      width: 100%;
-      border-radius: 0.25rem;
-      padding: 0.75rem;
-      border: 0.0625rem solid $mercury;
-      background-color: $alabaster;
-      font-family: inherit;
-      margin-bottom: $mobile-padding-sides;
-
-      &::placeholder {
-        color: $bandsite-black;
-        @include text-style(0.8125rem, 1.125rem, 400);
-      }
-
-      &:active {
-        border: 0.0625rem solid $bandsite-black;
-      }
-
-      &:invalid {
-        border: 0.0625rem solid #d22d2d;
-      }
-    }
-
-    &-button {
-      @include tablet {
-        width: calc(100% / 3);
-        margin-left: auto;
-      }
+    &:invalid {
+      border: 1px solid #d22d2d;
     }
   }
 
-  &__line {
-    margin-left: $mobile-padding-sides;
-    margin-right: $mobile-padding-sides;
+  &__textarea {
+    resize: none;
+    height: 90px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid $mercury;
+    background-color: $alabaster;
+    font-family: inherit;
+    margin-bottom: 16px;
 
-    @include tablet {
-      margin-left: calc($dt-padding-sides * 2);
-      margin-right: calc($dt-padding-sides * 2);
+    &::placeholder {
+      color: $bandsite-black;
+      @include text-style(13px, 18px, 400);
+    }
+
+    &:active {
+      border: 1px solid $bandsite-black;
+    }
+
+    &:invalid {
+      border: 1px solid #d22d2d;
     }
   }
 
-  &__list {
+  &__button {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid $bandsite-black;
+    width: 100%;
+    color: $white;
+    background-color: $bandsite-black;
+    @include text-style(14px, 22px, 600);
+    font-family: inherit;
+
+    &:hover {
+      border: 1px solid $bandsite-darkblack;
+      background-color: $bandsite-darkblack;
+    }
+    //   @include tablet {
+    //     width: calc(100% / 3);
+    //     margin-left: auto;
+    // }
+  }
+}
+
+.comments-card {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+
+  &__img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $mercury;
+    background-image: url("");
+    flex-shrink: 0;
+  }
+
+  &__info {
+    width: 100%;
+  }
+
+  &__personal {
     display: flex;
-    flex-direction: column;
-    gap: $mobile-padding-sides;
     justify-content: space-between;
-    padding: $mobile-padding-sides;
-
-    @include tablet {
-      gap: 1.125rem;
-      padding: $dt-padding-sides;
-      padding-left: calc($dt-padding-sides * 2);
-      padding-right: calc($dt-padding-sides * 2);
-      padding-top: 1.125rem;
-    }
+    padding-bottom: 16px;
+  }
+  &__time {
+    justify-self: flex-end;
+    color: $silver;
+    @include text-style(13px, 18px, 400);
   }
 
-  &__card {
-    display: flex;
-    gap: $mobile-padding-sides;
-    justify-content: flex-start;
+  &__name {
+    color: $bandsite-black;
+    @include text-style(13px, 18px, 600);
+  }
 
-    &-ph {
-      width: 2.25rem;
-      height: 2.25rem;
-      border-radius: 50%;
-      background-color: $mercury;
-      background-image: url("");
-      flex-shrink: 0;
-    }
+  &__comment {
+    overflow-wrap: break-word;
+    word-wrap: break-word; // Legacy support for older browsers
+    word-break: break-word;
 
-    &-info {
-      width: 100%;
+    color: $bandsite-darkblack;
 
-      &-personal {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: $mobile-padding-sides;
-
-        &-time {
-          justify-self: flex-end;
-          color: $silver;
-          @include text-style(0.8125rem, 1.125rem, 400);
-        }
-
-        &-name {
-          color: $bandsite-black;
-          @include text-style(0.8125rem, 1.125rem, 600);
-        }
-      }
-
-      &-comment {
-        overflow-wrap: break-word;
-        word-wrap: break-word; // Legacy support for older browsers
-        word-break: break-word;
-
-        color: $bandsite-darkblack;
-
-        @include text-style(0.8125rem, 1.125rem, 400);
-      }
-    }
+    @include text-style(13px, 18px, 400);
   }
 }

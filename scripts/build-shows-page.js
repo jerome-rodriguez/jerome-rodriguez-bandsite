@@ -37,34 +37,34 @@ const shows = [
 
 function createShowCard(show) {
   const cardElement = document.createElement("article");
-  cardElement.classList.add("shows__card");
+  cardElement.classList.add("shows-card");
 
   const dateHeader = document.createElement("h4");
-  dateHeader.classList.add("shows__card-header");
+  dateHeader.classList.add("shows-card__header");
   dateHeader.innerText = "DATE";
 
   const dateElement = document.createElement("p");
-  dateElement.classList.add("shows__card-date");
+  dateElement.classList.add("shows-card__date");
   dateElement.innerText = show.date;
 
   const venueHeader = document.createElement("h4");
-  venueHeader.classList.add("shows__card-header");
+  venueHeader.classList.add("shows-card__header");
   venueHeader.innerText = "VENUE";
 
   const venueElement = document.createElement("p");
-  venueElement.classList.add("shows__card-venue");
+  venueElement.classList.add("shows-card__venue");
   venueElement.innerText = show.venue;
 
   const locationHeader = document.createElement("h4");
-  locationHeader.classList.add("shows__card-header");
+  locationHeader.classList.add("shows-card__header");
   locationHeader.innerText = "LOCATION";
 
   const locationElement = document.createElement("p");
-  locationElement.classList.add("shows__card-location");
+  locationElement.classList.add("shows-card__location");
   locationElement.innerText = show.location;
 
   const buttonElement = document.createElement("button");
-  buttonElement.classList.add("shows__card-button");
+  buttonElement.classList.add("shows-card__button");
   buttonElement.innerText = "BUY TICKETS";
 
   cardElement.appendChild(dateHeader);
@@ -103,7 +103,7 @@ createShowCard({
 //function to create HTML for horizontal line
 
 function createLine() {
-  const lineElement = document.createElement("hr");
+  const lineElement = document.createElement("div");
   lineElement.classList.add("shows__line");
 
   return lineElement;
@@ -117,7 +117,7 @@ const renderShowsCards = () => {
   myShowsEl.innerHTML = "";
 
   const header = document.createElement("h2");
-  header.classList.add("shows__heading");
+  header.classList.add("shows__title");
   header.innerText = "Shows";
 
   const headerDiv = document.createElement("div");

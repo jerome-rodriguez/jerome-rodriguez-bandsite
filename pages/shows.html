@@ -10,23 +10,20 @@
   <body>
     <!--navigation bar-->
     <header class="header">
-      <nav class="header__nav">
-        <a class="header__nav-link" href="/index.html">
-          <img
-            class="header__nav-link-img"
-            src="/assets/logos/Logo-bandsite.svg"
-            alt="bandsite logo"
-          />
-        </a>
-        <ul class="header__nav-ul">
-          <li class="header__nav-ul-item">
-            <a class="header__nav-ul-item-link" href="/index.html">Biography</a>
+      <a class="header__link" href="/index.html">
+        <img
+          class="header__logo"
+          src="/assets/logos/Logo-bandsite.svg"
+          alt="bandsite logo"
+        />
+      </a>
+      <nav class="header-nav">
+        <ul class="header-nav__ul">
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="/index.html">Biography</a>
           </li>
-
-          <li class="header__nav-ul-item">
-            <a class="header__nav-ul-item-link" href="/pages/shows.html"
-              >Shows</a
-            >
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="/pages/shows.html">Shows</a>
           </li>
         </ul>
       </nav>
@@ -52,90 +49,76 @@
     </main>
     <!--get in touch-->
     <footer class="contact">
-      <section class="contact__heading">
-        <div class="contact__heading-left">
-          <h2 class="contact__heading-title">Get in Touch</h2>
-          <a class="contact__heading-link" href="https://instagram.com">
-            <img
-              class="contact__heading-logo contact__heading-logo-ig"
-              src="/assets/icons/Icon-instagram.svg"
-              alt="instagram logo"
-            />
-          </a>
-          <a class="contact__heading-link" href="https://facebook.com">
-            <img
-              class="contact__heading-logo contact__heading-logo--facebook"
-              src="/assets/icons/Icon-facebook.svg"
-              alt="facebook logo"
-            />
-          </a>
-          <a class="contact__heading-link" href="https://twitter.com">
-            <img
-              class="contact__heading-logo"
-              src="/assets/icons/Icon-twitter.svg"
-              alt="twitter logo"
-            />
-          </a>
-        </div>
-        <div class="contact__heading-right">
+      <h2 class="contact__title">Get in Touch</h2>
+      <section class="contact-socials">
+        <a class="contact-socials__link" href="https://instagram.com">
           <img
+            class="contact-socials__logo"
+            src="/assets/icons/Icon-instagram.svg"
+            alt="instagram logo"
+          />
+        </a>
+        <a class="contact-socials__link" href="https://facebook.com">
+          <img
+            class="contact-socials__logo"
+            src="/assets/icons/Icon-facebook.svg"
+            alt="facebook logo"
+          />
+        </a>
+        <a class="contact-socials__link" href="https://twitter.com">
+          <img
+            class="contact__logo"
+            src="/assets/icons/Icon-twitter.svg"
+            alt="twitter logo"
+          />
+        </a>
+      </section>
+
+      <!-- <img
             class="contact__heading-band"
             src="/assets/logos/Logo-bandsite.svg"
             alt="band logo"
-          />
-        </div>
-      </section>
-      <section class="contact__brand">
-        <article class="contact__brand-info">
-          <p class="contact__brand-info-name contact__brand-info-name-1">
+          /> -->
+
+      <section class="contact-brands">
+        <article class="contact-article">
+          <p class="contact-article__name contact-brands__main">
             The Bees Knees Management
           </p>
-          <p class="contact__brand-info-address contact__brand-info-address-1">
-            503 Broadway Penthouse,
-          </p>
-          <p
-            class="contact__brand-info-address contact__brand-info-address-1 contact__brand-info-address-2"
-          >
-            New York, NY 10012, USA
-          </p>
-          <a
-            class="contact__brand-info-email contact__brand-info-email-1"
-            href="mailto:info@thebeesknees.com"
+          <p class="contact-article__address">503 Broadway Penthouse,</p>
+          <p class="contact-article__address2">New York, NY 10012, USA</p>
+          <a class="contact-article__email" href="mailto:info@thebeesknees.com"
             >info@thebeesknees.com</a
           >
         </article>
-        <article class="contact__brand-info">
-          <p class="contact__brand-info-name">Limitless Artist Group</p>
-          <p class="contact__brand-info-address">Booking Agent for</p>
-          <p class="contact__brand-info-address contact__brand-info-address-2">
-            US / South America / Japan
-          </p>
+        <article class="contact-article">
+          <p class="contact-article__name">Limitless Artist Group</p>
+          <p class="contact-article__address">Booking Agent for</p>
+          <p class="contact-article__address2">US / South America / Japan</p>
           <a
-            class="contact__brand-info-email"
+            class="contact-article__email"
             href="mailto:bookings@limitlessag.com"
             >bookings@limitlessag.com</a
           >
         </article>
-        <article class="contact__brand-info">
-          <p class="contact__brand-info-name">ARCH Entertainment</p>
-          <p class="contact__brand-info-address">Booking Agent for</p>
-          <p class="contact__brand-info-address contact__brand-info-address-2">
-            UK / EU / AU
-          </p>
+        <article class="contact-article">
+          <p class="contact-article__name">ARCH Entertainment</p>
+          <p class="contact-article__address">Booking Agent for</p>
+          <p class="contact-article__address2">UK / EU / AU</p>
           <a
-            class="contact__brand-info-email"
+            class="contact-article__email"
             href="mailto:bookings@archentertainment.com"
             >bookings@archentertainment.com</a
           >
         </article>
       </section>
-      <section class="contact__bottom-section">
+      <section class="contact-footer">
         <img
-          class="contact__band-logo"
+          class="contact-footer__logo"
           src="/assets/logos/Logo-bandsite.svg"
           alt="band logo"
         />
-        <p class="contact__copyright">
+        <p class="contact-footer__copyright">
           Copyright The Bees Knees © 2023 All Rights Reserved
         </p>
       </section>

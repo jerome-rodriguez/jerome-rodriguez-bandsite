@@ -1,5 +1,3 @@
-@use "variables" as *;
-
 // repsonsive design breakpoints
 
 @mixin tablet {
@@ -14,57 +12,10 @@
   }
 }
 
-// padding
-
-@mixin padding-sides($padding) {
-  padding: 0%;
-  padding-left: $padding;
-  padding-right: $padding;
-}
-
-@mixin padding-component($top, $sides) {
-  padding: $sides;
-  padding-top: $top;
-}
-
 // text style
 
 @mixin text-style($size, $height, $weight) {
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
-}
-
-// call to actions
-
-@mixin button {
-  height: 2.5rem;
-  border-radius: 0.25rem; // double check if this is what is meant in style guide
-  border: 0.0625rem solid $bandsite-black;
-  width: 100%;
-  color: $white;
-  background-color: $bandsite-black;
-
-  // @include desktop {
-  //   width: 9.375rem;
-  //   padding: 0%;
-  //   padding-left: 2rem;
-  //   padding-right: 2rem;
-  // }
-
-  // @include tablet {
-  //   width: 9.375rem;
-  //   padding: 0%;
-  //   padding-left: 2rem;
-  //   padding-right: 2rem;
-  // }
-}
-
-// divider
-
-@mixin divider {
-  border: none;
-  background: none;
-  height: 0.0625rem;
-  background-color: $mercury;
 }

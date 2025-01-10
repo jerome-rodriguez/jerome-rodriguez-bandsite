@@ -25,27 +25,27 @@ const defaultComments = [
 
 function createCommentCard(comment) {
   const cardElement = document.createElement("article");
-  cardElement.classList.add("comments__card");
+  cardElement.classList.add("comments-card");
 
   const imgElement = document.createElement("div");
-  imgElement.classList.add("comments__card-ph");
+  imgElement.classList.add("comments-card__img");
 
   const infoElement = document.createElement("div");
-  infoElement.classList.add("comments__card-info");
+  infoElement.classList.add("comments-card__info");
 
   const personalElement = document.createElement("div");
-  personalElement.classList.add("comments__card-info-personal");
+  personalElement.classList.add("comments-card__personal");
 
   const nameElement = document.createElement("p");
-  nameElement.classList.add("comments__card-info-personal-name");
+  nameElement.classList.add("comments-card__name");
   nameElement.innerText = comment.name;
 
   const timeElement = document.createElement("p");
-  timeElement.classList.add("comments__card-info-personal-time");
+  timeElement.classList.add("comments-card__time");
   timeElement.innerText = comment.time;
 
   const commentElement = document.createElement("p");
-  commentElement.classList.add("comments__card-info-comment");
+  commentElement.classList.add("comments-card__comment");
   commentElement.innerText = comment.comment;
 
   personalElement.appendChild(nameElement);
@@ -68,8 +68,8 @@ createCommentCard({ name: "Sarah", time: "12/12/2024", comment: "text 3" });
 //function to create HTML for horizontal line
 
 function createLine() {
-  const lineElement = document.createElement("hr");
-  lineElement.classList.add("shows__line");
+  const lineElement = document.createElement("div");
+  lineElement.classList.add("comments__line");
 
   return lineElement;
 }
@@ -86,7 +86,7 @@ function createLine() {
 // 3. function to render HTML to browser
 
 const renderCommentCards = () => {
-  const myCommentEl = document.querySelector(".comments__list");
+  const myCommentEl = document.querySelector(".comments__default");
 
   myCommentEl.innerHTML = "";
 
@@ -105,7 +105,7 @@ renderCommentCards();
 
 // 4. Submit button
 
-const formEl = document.querySelector(".comments__form");
+const formEl = document.querySelector(".comments-article__form");
 
 formEl.addEventListener("submit", submitHandler);
 
