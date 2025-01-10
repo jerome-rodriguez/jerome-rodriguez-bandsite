@@ -1,37 +1,7 @@
-// shows data
+// BandSite API instance
 
-const shows = [
-  {
-    date: "Mon Sept 09 2024",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 17 2024",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Oct 12 2024",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 16 2024",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 29 2024",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 18 2024",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
+const apiKey = "b908182c-2f05-45b9-a12d-1ac71ac691c9";
+const bandSiteApi = new BandSiteApi(apiKey);
 
 // function to create HTML for shows
 
@@ -43,22 +13,33 @@ function createShowCard(show) {
   dateHeader.classList.add("shows-card__header");
   dateHeader.innerText = "DATE";
 
+  //get from api
   const dateElement = document.createElement("p");
   dateElement.classList.add("shows-card__date");
-  dateElement.innerText = show.date;
+  const dateObj = new Date(show.date);
+  dateElement.innerText = dateObj
+    .toLocaleDateString("en-US", {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    })
+    .replace(/,/g, "");
 
   const venueHeader = document.createElement("h4");
   venueHeader.classList.add("shows-card__header");
   venueHeader.innerText = "VENUE";
 
+  //get from api
   const venueElement = document.createElement("p");
   venueElement.classList.add("shows-card__venue");
-  venueElement.innerText = show.venue;
+  venueElement.innerText = show.place;
 
   const locationHeader = document.createElement("h4");
   locationHeader.classList.add("shows-card__header");
   locationHeader.innerText = "LOCATION";
 
+  //get from api
   const locationElement = document.createElement("p");
   locationElement.classList.add("shows-card__location");
   locationElement.innerText = show.location;
@@ -75,32 +56,10 @@ function createShowCard(show) {
   cardElement.appendChild(locationElement);
   cardElement.appendChild(buttonElement);
 
-  console.log(cardElement);
   return cardElement;
 }
 
-createShowCard({
-  date: "Tues Dec 14 2024",
-  venue: "Golden Gate Bridge",
-  location: "San Francisco, CA",
-});
-createShowCard({
-  date: "Tues Dec 19 2024",
-  venue: "Amazon Sheres",
-  location: "Seattle, WA",
-});
-
-// function to create HTML for button
-
-// function createButton() {
-//   const buttonElement = document.createElement("button");
-//   buttonElement.classList.add("shows__button");
-//   buttonElement.innerText = "BUY TICKETS";
-
-//   return buttonElement;
-// }
-
-//function to create HTML for horizontal line
+// //function to create HTML for horizontal line
 
 function createLine() {
   const lineElement = document.createElement("div");
@@ -111,7 +70,8 @@ function createLine() {
 
 // function to render HTML to browser
 
-const renderShowsCards = () => {
+async function renderShowsCards() {
+  const shows = await bandSiteApi.getShows();
   const myShowsEl = document.querySelector(".shows");
 
   myShowsEl.innerHTML = "";
@@ -154,6 +114,6 @@ const renderShowsCards = () => {
     myShowsEl.appendChild(card);
     myShowsEl.appendChild(line);
   }
-};
+}
 
 renderShowsCards();
