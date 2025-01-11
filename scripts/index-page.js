@@ -62,17 +62,21 @@ function createLine() {
 // 3. function to render HTML to browser
 
 async function renderCommentCards() {
-  const defaultComments = await bandSiteApi.getComments();
-  const myCommentEl = document.querySelector(".comments__default");
+  try {
+    const defaultComments = await bandSiteApi.getComments();
+    const myCommentEl = document.querySelector(".comments__default");
 
-  myCommentEl.innerHTML = ""; // feedback ??????
+    myCommentEl.innerHTML = "";
 
-  for (let i = 0; i < defaultComments.length; i++) {
-    const card = createCommentCard(defaultComments[i]);
-    const line = createLine();
+    for (let i = 0; i < defaultComments.length; i++) {
+      const card = createCommentCard(defaultComments[i]);
+      const line = createLine();
 
-    myCommentEl.appendChild(card);
-    myCommentEl.appendChild(line);
+      myCommentEl.appendChild(card);
+      myCommentEl.appendChild(line);
+    }
+  } catch (error) {
+    console.error("Error rendering comments:".error);
   }
 }
 
@@ -82,22 +86,29 @@ renderCommentCards();
 
 const formEl = document.querySelector(".comments-article__form");
 
+//turn into async function
 formEl.addEventListener("submit", submitHandler);
 
-function submitHandler(event) {
+async function submitHandler(event) {
   event.preventDefault();
 
   let cardData = {
     name: event.target.name.value,
-    time: event.target.time.value,
+    // timestamp: new Date().getTime(),
     comment: event.target.comment.value,
   };
 
-  defaultComments.unshift(cardData);
+  try {
+    const defaultComments = await bandSiteApi.getComments();
+    const response = await bandSiteApi.postComment(cardData);
 
-  console.log(defaultComments);
+    defaultComments.unshift(response);
 
-  renderCommentCards();
+    renderCommentCards();
+    event.target.reset();
+  } catch (error) {
+    console.error("Error submitting comment:", error);
+  }
 }
 
 // 5. hidden date input

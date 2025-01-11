@@ -71,48 +71,52 @@ function createLine() {
 // function to render HTML to browser
 
 async function renderShowsCards() {
-  const shows = await bandSiteApi.getShows();
-  const myShowsEl = document.querySelector(".shows");
+  try {
+    const shows = await bandSiteApi.getShows();
+    const myShowsEl = document.querySelector(".shows");
 
-  myShowsEl.innerHTML = "";
+    myShowsEl.innerHTML = "";
 
-  const header = document.createElement("h2");
-  header.classList.add("shows__title");
-  header.innerText = "Shows";
+    const header = document.createElement("h2");
+    header.classList.add("shows__title");
+    header.innerText = "Shows";
 
-  const headerDiv = document.createElement("div");
-  headerDiv.classList.add("shows__header");
+    const headerDiv = document.createElement("div");
+    headerDiv.classList.add("shows__header");
 
-  const dateHeader = document.createElement("h4");
-  dateHeader.classList.add("shows__header-date");
-  dateHeader.innerText = "DATE";
+    const dateHeader = document.createElement("h4");
+    dateHeader.classList.add("shows__header-date");
+    dateHeader.innerText = "DATE";
 
-  const venueHeader = document.createElement("h4");
-  venueHeader.classList.add("shows__header-venue");
-  venueHeader.innerText = "VENUE";
+    const venueHeader = document.createElement("h4");
+    venueHeader.classList.add("shows__header-venue");
+    venueHeader.innerText = "VENUE";
 
-  const locationHeader = document.createElement("h4");
-  locationHeader.classList.add("shows__header-location");
-  locationHeader.innerText = "LOCATION";
+    const locationHeader = document.createElement("h4");
+    locationHeader.classList.add("shows__header-location");
+    locationHeader.innerText = "LOCATION";
 
-  const buttonElement = document.createElement("button");
-  buttonElement.classList.add("shows__header-button");
-  buttonElement.innerText = "BUY TICKETS";
+    const buttonElement = document.createElement("button");
+    buttonElement.classList.add("shows__header-button");
+    buttonElement.innerText = "BUY TICKETS";
 
-  headerDiv.appendChild(dateHeader);
-  headerDiv.appendChild(venueHeader);
-  headerDiv.appendChild(locationHeader);
-  headerDiv.appendChild(buttonElement);
+    headerDiv.appendChild(dateHeader);
+    headerDiv.appendChild(venueHeader);
+    headerDiv.appendChild(locationHeader);
+    headerDiv.appendChild(buttonElement);
 
-  myShowsEl.appendChild(header);
-  myShowsEl.appendChild(headerDiv);
+    myShowsEl.appendChild(header);
+    myShowsEl.appendChild(headerDiv);
 
-  for (let i = 0; i < shows.length; i++) {
-    const card = createShowCard(shows[i]);
-    const line = createLine();
+    for (let i = 0; i < shows.length; i++) {
+      const card = createShowCard(shows[i]);
+      const line = createLine();
 
-    myShowsEl.appendChild(card);
-    myShowsEl.appendChild(line);
+      myShowsEl.appendChild(card);
+      myShowsEl.appendChild(line);
+    }
+  } catch (error) {
+    console.error("Error rendering shows information:", error);
   }
 }
 
