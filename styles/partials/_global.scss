@@ -23,8 +23,18 @@ body {
   align-items: center;
   justify-content: center;
 
+  @include tablet {
+    padding: 32px 36px;
+    flex-direction: row;
+  }
+
   &__link {
     padding-bottom: 16px;
+
+    @include tablet {
+      padding-bottom: 0px;
+      padding-right: 36px;
+    }
   }
 
   &__logo {
@@ -42,6 +52,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    @include tablet {
+      justify-content: flex-start;
+    }
   }
 
   &__item {
@@ -66,6 +80,10 @@ body {
       font-weight: 700;
       border-color: $white;
     }
+
+    @include tablet {
+      padding: 0px 36px 32px;
+    }
   }
 }
 
@@ -74,9 +92,17 @@ body {
   color: $white;
   padding: 24px 16px 16px;
 
+  @include tablet {
+    padding: 48px 36px 48px;
+  }
+
   &__title {
     padding-bottom: 16px;
     @include text-style(24px, 32px, 700);
+
+    @include tablet {
+      display: none;
+    }
   }
 }
 .contact-socials {
@@ -87,21 +113,39 @@ body {
   &__logo {
     padding-right: 32px;
   }
+
+  @include tablet {
+    display: none;
+  }
 }
 
 .contact-article {
   &__name {
     padding: 32px 0px 16px;
     @include text-style(13px, 18px, 700);
+
+    @include tablet {
+      padding: 48px 0px 36px;
+      @include text-style(14px, 20px, 700);
+    }
   }
 
   &__address {
     @include text-style(13px, 18px, 400);
+
+    @include tablet {
+      @include text-style(14px, 20px, 400);
+    }
   }
 
   &__address2 {
     padding-bottom: 16px;
     @include text-style(13px, 18px, 400);
+
+    @include tablet {
+      padding-bottom: 36px;
+      @include text-style(14px, 20px, 400);
+    }
   }
 
   &__email {
@@ -109,11 +153,58 @@ body {
     color: $white;
 
     @include text-style(13px, 18px, 400);
+
+    @include tablet {
+      @include text-style(14px, 20px, 400);
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @include tablet {
+      display: flex;
+
+      @include text-style(36px, 44px, 700);
+    }
+  }
+
+  &__socials {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      line-height: 44px;
+      gap: 32px; //maybe change value
+    }
+  }
+
+  &__img {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      justify-self: flex-end;
+    }
+  }
+
+  &__container {
+    @include tablet {
+      height: 44px;
+    }
   }
 }
 .contact-brands {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
   &__main {
     padding-top: 16px;
+
+    @include tablet {
+      padding-top: 48px;
+    }
   }
 }
 
@@ -121,10 +212,19 @@ body {
   &__logo {
     padding-top: 48px;
     width: 120px;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__copyright {
     padding: 16px 0px;
     @include text-style(13px, 18px, 400);
+
+    @include tablet {
+      padding-top: 48px;
+      @include text-style(14px, 20px, 400);
+    }
   }
 }

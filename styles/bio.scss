@@ -20,6 +20,11 @@
     padding-left: 16px;
 
     @include text-style(24px, 32px, 700);
+
+    @include tablet {
+      padding-left: 36px;
+      @include text-style(60px, 68px, 700);
+    }
   }
 }
 
@@ -27,37 +32,82 @@
   color: $bandsite-black;
   padding: 24px 16px 16px;
 
+  @include tablet {
+    padding: 48px 36px 36px;
+  }
+
   &__title {
     @include text-style(24px, 32px, 700);
+
+    @include tablet {
+      @include text-style(36px, 44px, 700);
+    }
   }
 
   &__img {
     width: 100%;
     height: auto;
     padding: 16px 0px;
+
+    @include tablet {
+      padding: 36px 64px;
+    }
   }
 
   &__quote {
     @include text-style(14px, 22px, 700);
+
+    @include tablet {
+      padding: 0px 64px;
+      @include text-style(24px, 32px, 600);
+    }
   }
 
   &__quote-source {
     padding-top: 8px;
     @include text-style(14px, 22px, 700);
+
+    @include tablet {
+      padding: 8px 64px 0px; //change 8px maybe
+      @include text-style(14px, 22px, 700); //change values or remove
+    }
   }
 
   &__band-name {
     padding: 32px 0px 16px;
     @include text-style(14px, 22px, 600);
+
+    @include tablet {
+      padding: 48px 64px 36px;
+      @include text-style(24px, 32px, 500);
+    }
+  }
+
+  &__band-container {
+    @include tablet {
+      display: flex;
+      gap: 24px; //change maybe to 16px idk
+    }
   }
 
   &__band-p1 {
     @include text-style(13px, 18px, 400);
+
+    @include tablet {
+      padding-left: 64px;
+      @include text-style(14px, 22px, 400);
+    }
   }
 
   &__band-p2 {
     padding-top: 32px;
     @include text-style(13px, 18px, 400);
+
+    @include tablet {
+      padding-top: 0px;
+      padding-right: 64px;
+      @include text-style(14px, 22px, 400);
+    }
   }
 }
 
@@ -65,30 +115,37 @@
   background-color: $alabaster;
   padding: 24px 16px 16px;
 
+  @include tablet {
+    padding: 48px 36px 36px;
+  }
+
   &__title {
     color: $bandsite-black;
 
     @include text-style(24px, 32px, 700);
+
+    @include tablet {
+      padding-bottom: 36px;
+      @include text-style(36px, 44px, 700);
+    }
   }
 
-  //   &__grid {
-  //     @include tablet {
-  //       @include padding-component(0px, $dt-padding-sides);
+  &__card-container {
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
 
-  //       display: grid;
-  //       grid-template-columns: repeat(3, 1fr);
-  //       gap: 1.5rem;
-  //     }
+    // @include desktop {
+    //   @include padding-component(0px, $desktop-padding-sides);
+    //   padding-bottom: $dt-padding-sides;
 
-  //     @include desktop {
-  //       @include padding-component(0px, $desktop-padding-sides);
-  //       padding-bottom: $dt-padding-sides;
-
-  //       display: grid;
-  //       grid-template-columns: repeat(3, 1fr);
-  //       gap: 1.5rem;
-  //     }
-  //   }
+    //   display: grid;
+    //   grid-template-columns: repeat(3, 1fr);
+    //   gap: 1.5rem;
+    // }
+  }
 
   &__card-img {
     display: flex;
@@ -100,17 +157,30 @@
     &:hover {
       filter: grayscale(0%);
     }
+
+    @include tablet {
+      padding-top: 0px;
+    }
   }
 }
 
-// double check comments section styling before submitting - Jan 10, 2025
+// double check comments section styling before submitting for all 3 screen sizes - Jan 11, 2025
 
 .comments {
   padding: 24px 16px 0px;
+
+  @include tablet {
+    padding: 48px 36px 36px;
+  }
   &__title {
     color: $bandsite-black;
 
     @include text-style(24px, 32px, 700);
+
+    @include tablet {
+      padding-bottom: 36px;
+      @include text-style(36px, 44px, 700);
+    }
   }
 
   &__line {
@@ -126,6 +196,18 @@
     gap: 16px;
     justify-content: space-between;
     padding: 16px 0px;
+
+    @include tablet {
+      gap: 24px; //might change
+      padding: 36px 64px 0px;
+    }
+  }
+}
+
+.line {
+  @include tablet {
+    margin-left: 64px;
+    margin-right: 64px;
   }
 }
 
@@ -133,6 +215,11 @@
   padding-bottom: 16px;
   display: flex;
   gap: 16px;
+
+  @include tablet {
+    padding: 0px 64px 32px;
+    gap: 24px;
+  }
 
   &__img {
     //picture doesn't match mockup
@@ -153,9 +240,15 @@
     color: $silver;
     padding-bottom: 4px;
     @include text-style(10px, 20px, 700);
+
+    @include tablet {
+      // add padding-bottom maybe?
+      @include text-style(12px, 20px, 700);
+    }
   }
 
   &__input {
+    // style the following later
     height: 36px;
     width: 100%;
     border-radius: 4px;
@@ -167,6 +260,10 @@
     &::placeholder {
       color: $bandsite-black;
       @include text-style(13px, 18px, 400);
+
+      @include tablet {
+        @include text-style(14px, 22px, 400);
+      }
     }
 
     &:active {
@@ -217,10 +314,10 @@
       border: 1px solid $bandsite-darkblack;
       background-color: $bandsite-darkblack;
     }
-    //   @include tablet {
-    //     width: calc(100% / 3);
-    //     margin-left: auto;
-    // }
+    @include tablet {
+      width: calc(100% / 3);
+      align-self: flex-end;
+    }
   }
 }
 

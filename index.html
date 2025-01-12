@@ -45,77 +45,79 @@
         </h3>
         <h4 class="about__quote-source">- Lead vocalist of The Bees Knees</h4>
         <h3 class="about__band-name">The Bees Knees</h3>
-        <p class="about__band-p1">
-          The Bees Knees is a pop rock band originating from San Francisco,
-          California. The band consists a dynamic lineup featuring two lead
-          vocalists, two guitarists, a bassist, a keyboardist and a drummer. The
-          band achieved its first commercial success as an unsigned act, drawing
-          attention from their future manager. Having extensive experience
-          working with both new and seasoned acts, the manager was confident the
-          band could succeed even further with more support, pushing The Bees
-          Knees to sign with a well known record label.
-        </p>
-        <p class="about__band-p2">
-          From there, the band has soared, gaining international recognition and
-          ranking in the top 10 on the Poster Charts. New fans immediately fell
-          in love with the band’s original and organic attitude, solidifying
-          their place as one of the hottest and fastest up and coming acts of
-          this century. Fans affectionately refer to themselves as “The Hive”
-          and are drawn to their candid and authentic performances on stage. The
-          Bees Knees are currently recording their second studio album, looking
-          to be released in early 2024.
-        </p>
+        <div class="about__band-container">
+          <p class="about__band-p1">
+            The Bees Knees is a pop rock band originating from San Francisco,
+            California. The band consists a dynamic lineup featuring two lead
+            vocalists, two guitarists, a bassist, a keyboardist and a drummer.
+            The band achieved its first commercial success as an unsigned act,
+            drawing attention from their future manager. Having extensive
+            experience working with both new and seasoned acts, the manager was
+            confident the band could succeed even further with more support,
+            pushing The Bees Knees to sign with a well known record label.
+          </p>
+          <p class="about__band-p2">
+            From there, the band has soared, gaining international recognition
+            and ranking in the top 10 on the Poster Charts. New fans immediately
+            fell in love with the band’s original and organic attitude,
+            solidifying their place as one of the hottest and fastest up and
+            coming acts of this century. Fans affectionately refer to themselves
+            as “The Hive” and are drawn to their candid and authentic
+            performances on stage. The Bees Knees are currently recording their
+            second studio album, looking to be released in early 2024.
+          </p>
+        </div>
       </section>
       <!--photo gallery-->
       <section class="photos">
         <h2 class="photos__title">Photo Gallery</h2>
-        <!-- <div class="photos__grid"> -->
-        <img
-          class="photos__card-img"
-          src="/assets/images/Photo-gallery-1.jpg"
-          alt="back of audience heads"
-        />
-        <img
-          class="photos__card-img"
-          src="/assets/images/Photo-gallery-2.jpg"
-          alt="fan enjoying music"
-        />
-        <img
-          class="photos__card-img"
-          src="/assets/images/Photo-gallery-3.jpg"
-          alt="hands of audience"
-        />
-        <img
-          class="photos__card-img"
-          src="/assets/images/Photo-gallery-4.jpg"
-          alt="back of fan on shoulders"
-        />
-        <img
-          class="photos__card-img"
-          src="/assets/images/Photo-gallery-5.jpg"
-          alt="confetti shot"
-        />
-        <img
-          class="photos__card-img"
-          src="/assets/images/Photo-gallery-9.jpg"
-          alt="confetti falling on audience"
-        />
-        <img
-          class="photos__card-img"
-          src="./assets/images/Photo-gallery-7.jpg"
-          alt="far view of confetti on stage and audience"
-        />
-        <img
-          class="photos__card-img"
-          src="./assets/images/Photo-gallery-8.jpg"
-          alt="dj spin decks"
-        />
-        <img
-          class="photos__card-img"
-          src="./assets/images/Photo-gallery-6.jpg"
-          alt="singer"
-        />
-        <!-- </div> -->
+        <div class="photos__card-container">
+          <img
+            class="photos__card-img"
+            src="/assets/images/Photo-gallery-1.jpg"
+            alt="back of audience heads"
+          />
+          <img
+            class="photos__card-img"
+            src="/assets/images/Photo-gallery-2.jpg"
+            alt="fan enjoying music"
+          />
+          <img
+            class="photos__card-img"
+            src="/assets/images/Photo-gallery-3.jpg"
+            alt="hands of audience"
+          />
+          <img
+            class="photos__card-img"
+            src="/assets/images/Photo-gallery-4.jpg"
+            alt="back of fan on shoulders"
+          />
+          <img
+            class="photos__card-img"
+            src="/assets/images/Photo-gallery-5.jpg"
+            alt="confetti shot"
+          />
+          <img
+            class="photos__card-img"
+            src="/assets/images/Photo-gallery-9.jpg"
+            alt="confetti falling on audience"
+          />
+          <img
+            class="photos__card-img"
+            src="./assets/images/Photo-gallery-7.jpg"
+            alt="far view of confetti on stage and audience"
+          />
+          <img
+            class="photos__card-img"
+            src="./assets/images/Photo-gallery-8.jpg"
+            alt="dj spin decks"
+          />
+          <img
+            class="photos__card-img"
+            src="./assets/images/Photo-gallery-6.jpg"
+            alt="singer"
+          />
+        </div>
       </section>
       <!--join the conversation-->
       <section class="comments">
@@ -135,13 +137,7 @@
               id="name"
               placeholder="Enter your name"
             />
-            <input
-              class="comments-article__date"
-              type="hidden"
-              name="time"
-              id="time"
-              value=""
-            />
+
             <label class="comments-article__label" for="comment">COMMENT</label>
             <textarea
               class="comments-article__textarea"
@@ -152,7 +148,7 @@
             <button class="comments-article__button">COMMENT</button>
           </form>
         </article>
-        <div class="comments__line"></div>
+        <div class="comments__line line"></div>
 
         <div class="comments__default">
           <!--comments go here -->
@@ -185,15 +181,9 @@
           />
         </a>
       </section>
-
-      <!-- <img
-            class="contact__heading-band"
-            src="/assets/logos/Logo-bandsite.svg"
-            alt="band logo"
-          /> -->
-
       <section class="contact-brands">
         <article class="contact-article">
+          <h2 class="contact-article__title">Get in Touch</h2>
           <p class="contact-article__name contact-brands__main">
             The Bees Knees Management
           </p>
@@ -204,6 +194,35 @@
           >
         </article>
         <article class="contact-article">
+          <div class="contact-article__socials">
+            <a
+              class="contact-article__socials-link"
+              href="https://instagram.com"
+            >
+              <img
+                class="contact-article__socials-logo"
+                src="/assets/icons/Icon-instagram.svg"
+                alt="instagram logo"
+              />
+            </a>
+            <a
+              class="contact-article__socials-link"
+              href="https://facebook.com"
+            >
+              <img
+                class="contact-article__socials-logo"
+                src="/assets/icons/Icon-facebook.svg"
+                alt="facebook logo"
+              />
+            </a>
+            <a class="contact-article__socials-link" href="https://twitter.com">
+              <img
+                class="contact-article__socials-logo"
+                src="/assets/icons/Icon-twitter.svg"
+                alt="twitter logo"
+              />
+            </a>
+          </div>
           <p class="contact-article__name">Limitless Artist Group</p>
           <p class="contact-article__address">Booking Agent for</p>
           <p class="contact-article__address2">US / South America / Japan</p>
@@ -214,6 +233,14 @@
           >
         </article>
         <article class="contact-article">
+          <div class="contact-article__container">
+            <img
+              class="contact-article__img"
+              src="/assets/logos/Logo-bandsite.svg"
+              alt="band logo"
+            />
+          </div>
+
           <p class="contact-article__name">ARCH Entertainment</p>
           <p class="contact-article__address">Booking Agent for</p>
           <p class="contact-article__address2">UK / EU / AU</p>

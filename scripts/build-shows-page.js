@@ -3,7 +3,7 @@
 const apiKey = "b908182c-2f05-45b9-a12d-1ac71ac691c9";
 const bandSiteApi = new BandSiteApi(apiKey);
 
-// function to create HTML for shows
+// Function to create HTML for shows
 
 function createShowCard(show) {
   const cardElement = document.createElement("article");
@@ -13,7 +13,7 @@ function createShowCard(show) {
   dateHeader.classList.add("shows-card__header");
   dateHeader.innerText = "DATE";
 
-  //get from api
+  // get from api
   const dateElement = document.createElement("p");
   dateElement.classList.add("shows-card__date");
   const dateObj = new Date(show.date);
@@ -30,7 +30,7 @@ function createShowCard(show) {
   venueHeader.classList.add("shows-card__header");
   venueHeader.innerText = "VENUE";
 
-  //get from api
+  // get from api
   const venueElement = document.createElement("p");
   venueElement.classList.add("shows-card__venue");
   venueElement.innerText = show.place;
@@ -39,7 +39,7 @@ function createShowCard(show) {
   locationHeader.classList.add("shows-card__header");
   locationHeader.innerText = "LOCATION";
 
-  //get from api
+  // get from api
   const locationElement = document.createElement("p");
   locationElement.classList.add("shows-card__location");
   locationElement.innerText = show.location;
@@ -59,7 +59,7 @@ function createShowCard(show) {
   return cardElement;
 }
 
-// //function to create HTML for horizontal line
+// Function to create HTML for horizontal line
 
 function createLine() {
   const lineElement = document.createElement("div");
@@ -68,7 +68,7 @@ function createLine() {
   return lineElement;
 }
 
-// function to render HTML to browser
+// Function to render HTML to browser (GET shows data)
 
 async function renderShowsCards() {
   try {

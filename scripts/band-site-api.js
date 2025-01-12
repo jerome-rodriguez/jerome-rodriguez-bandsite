@@ -1,5 +1,5 @@
 class BandSiteApi {
-  // constructor accepts API key as its only paameter
+  // constructor accepts API key as its only parameter
   constructor(apiKey) {
     this.apiKey = apiKey;
     this.baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com";
@@ -30,7 +30,7 @@ class BandSiteApi {
     }
   }
 
-  // sends a GET request to shows API and returns array of show data objects
+  // sends a GET request to the API and returns array of show data
   async getShows() {
     try {
       const response = await axios.get(

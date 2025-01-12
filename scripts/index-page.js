@@ -3,7 +3,7 @@
 const apiKey = "efa62bde-09f7-40d2-837d-afb350f1503b";
 const bandSiteApi = new BandSiteApi(apiKey);
 
-// 2. function to creat HTML for comments
+// Function to create HTML for comments
 
 function createCommentCard(comment) {
   const cardElement = document.createElement("article");
@@ -18,12 +18,12 @@ function createCommentCard(comment) {
   const personalElement = document.createElement("div");
   personalElement.classList.add("comments-card__personal");
 
-  //get from api
+  // get from api
   const nameElement = document.createElement("p");
   nameElement.classList.add("comments-card__name");
   nameElement.innerText = comment.name;
 
-  //get from api
+  // get from api
   const timeElement = document.createElement("p");
   timeElement.classList.add("comments-card__time");
   const dateObj = new Date(comment.timestamp);
@@ -33,7 +33,7 @@ function createCommentCard(comment) {
     day: "2-digit",
   });
 
-  //get from api
+  // get from api
   const commentElement = document.createElement("p");
   commentElement.classList.add("comments-card__comment");
   commentElement.innerText = comment.comment;
@@ -50,7 +50,7 @@ function createCommentCard(comment) {
   return cardElement;
 }
 
-// function to create HTML for horizontal line
+// Function to create HTML for horizontal line
 
 function createLine() {
   const lineElement = document.createElement("div");
@@ -59,7 +59,7 @@ function createLine() {
   return lineElement;
 }
 
-// 3. function to render HTML to browser
+// Function to render HTML to browser (GET default comments)
 
 async function renderCommentCards() {
   try {
@@ -82,11 +82,10 @@ async function renderCommentCards() {
 
 renderCommentCards();
 
-// 4. Submit button
+// Function to POST new comments from Submit Button Form
 
 const formEl = document.querySelector(".comments-article__form");
 
-//turn into async function
 formEl.addEventListener("submit", submitHandler);
 
 async function submitHandler(event) {
@@ -94,7 +93,6 @@ async function submitHandler(event) {
 
   let cardData = {
     name: event.target.name.value,
-    // timestamp: new Date().getTime(),
     comment: event.target.comment.value,
   };
 
@@ -110,18 +108,3 @@ async function submitHandler(event) {
     console.error("Error submitting comment:", error);
   }
 }
-
-// 5. hidden date input
-
-const hiddenInput = document.getElementById("time");
-const currentDate = new Date();
-
-// Extract month, day, and year
-const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are 0-indexed
-const day = String(currentDate.getDate()).padStart(2, "0");
-const year = currentDate.getFullYear();
-
-// Format to MM/DD/YYYY
-const formattedDate = `${month}/${day}/${year}`;
-
-hiddenInput.value = formattedDate;
