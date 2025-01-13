@@ -16,7 +16,7 @@ body {
 
 .header {
   background-color: $bandsite-black;
-  padding: 16px 0px;
+  padding: 1rem 0rem;
 
   display: flex;
   flex-direction: column;
@@ -24,26 +24,26 @@ body {
   justify-content: center;
 
   @include tablet {
-    padding: 32px 36px;
+    padding: 2rem 2.25rem;
     flex-direction: row;
   }
 
   @include desktop {
-    padding: 32px 128px; //might change 32px
+    padding: 2rem 8rem;
   }
 
   &__link {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
 
     @include tablet {
-      padding-bottom: 0px;
-      padding-right: 36px;
+      padding-bottom: 0rem;
+      padding-right: 2.25rem;
     }
   }
 
   &__logo {
-    width: 120px;
-    height: 20px;
+    width: 7.5rem;
+    height: 1.25rem;
   }
 }
 
@@ -69,9 +69,9 @@ body {
   &__link {
     text-decoration: none;
     color: $mercury;
-    padding-bottom: 14px;
+    padding-bottom: 0.875rem;
 
-    border-bottom: 2px solid transparent;
+    border-bottom: 0.125rem solid transparent;
 
     &:hover {
       color: $white;
@@ -86,7 +86,7 @@ body {
     }
 
     @include tablet {
-      padding: 0px 36px 32px;
+      padding: 0rem 2.25rem 2rem;
     }
   }
 }
@@ -94,19 +94,19 @@ body {
 .contact {
   background-color: $bandsite-black;
   color: $white;
-  padding: 24px 16px 16px;
+  padding: 1.5rem 1rem 1rem;
 
   @include tablet {
-    padding: 48px 36px 48px;
+    padding: 3rem 2.25rem 3rem;
   }
 
   @include desktop {
-    padding: 48px 128px 48px;
+    padding: 3rem 8rem 3rem;
   }
 
   &__title {
-    padding-bottom: 16px;
-    @include text-style(24px, 32px, 700);
+    padding-bottom: 1rem;
+    @include text-style(1.5rem, 2rem, 700);
 
     @include tablet {
       display: none;
@@ -119,7 +119,7 @@ body {
   }
 
   &__logo {
-    padding-right: 32px;
+    padding-right: 2rem;
   }
 
   @include tablet {
@@ -129,30 +129,30 @@ body {
 
 .contact-article {
   &__name {
-    padding: 32px 0px 16px;
-    @include text-style(13px, 18px, 700);
+    padding: 2rem 0rem 1rem;
+    @include text-style(0.8125rem, 1.125rem, 700);
 
     @include tablet {
-      padding: 48px 0px 36px;
-      @include text-style(14px, 20px, 700);
+      padding: 3rem 0rem 2.25rem;
+      @include text-style(0.875rem, 1.25rem, 700);
     }
   }
 
   &__address {
-    @include text-style(13px, 18px, 400);
+    @include text-style(0.8125rem, 1.125rem, 400);
 
     @include tablet {
-      @include text-style(14px, 20px, 400);
+      @include text-style(0.875rem, 1.25rem, 400);
     }
   }
 
   &__address2 {
-    padding-bottom: 16px;
-    @include text-style(13px, 18px, 400);
+    padding-bottom: 1rem;
+    @include text-style(0.8125rem, 1.125rem, 400);
 
     @include tablet {
-      padding-bottom: 36px;
-      @include text-style(14px, 20px, 400);
+      padding-bottom: 2.25rem;
+      @include text-style(0.875rem, 1.25rem, 400);
     }
   }
 
@@ -160,10 +160,10 @@ body {
     text-decoration: none;
     color: $white;
 
-    @include text-style(13px, 18px, 400);
+    @include text-style(0.8125rem, 1.125rem, 400);
 
     @include tablet {
-      @include text-style(14px, 20px, 400);
+      @include text-style(0.875rem, 1.25rem, 400);
     }
   }
 
@@ -173,7 +173,7 @@ body {
     @include tablet {
       display: flex;
 
-      @include text-style(36px, 44px, 700);
+      @include text-style(2.25rem, 2.75rem, 700);
     }
   }
 
@@ -182,8 +182,8 @@ body {
 
     @include tablet {
       display: flex;
-      line-height: 44px;
-      gap: 32px; //maybe change value
+      line-height: 2.75rem;
+      gap: 2rem;
     }
   }
 
@@ -202,7 +202,7 @@ body {
 
   &__container {
     @include tablet {
-      height: 44px;
+      height: 2.75rem;
     }
   }
 
@@ -211,15 +211,15 @@ body {
 
     @include desktop {
       display: flex;
-      height: 44px;
+      height: 2.75rem;
       align-items: flex-start;
     }
   }
 
   &__logo {
     @include desktop {
-      width: 120px;
-      height: 20px;
+      width: 7.5rem;
+      height: 1.25rem;
       justify-self: flex-end;
     }
   }
@@ -230,18 +230,18 @@ body {
     justify-content: space-between;
   }
   &__main {
-    padding-top: 16px;
+    padding-top: 1rem;
 
     @include tablet {
-      padding-top: 48px;
+      padding-top: 3rem;
     }
   }
 }
 
 .contact-footer {
   &__logo {
-    padding-top: 48px;
-    width: 120px;
+    padding-top: 3rem;
+    width: 7.5rem;
 
     @include tablet {
       display: none;
@@ -249,12 +249,12 @@ body {
   }
 
   &__copyright {
-    padding: 16px 0px;
-    @include text-style(13px, 18px, 400);
+    padding: 1rem 0rem;
+    @include text-style(0.8125rem, 1.125rem, 400);
 
     @include tablet {
-      padding-top: 48px;
-      @include text-style(14px, 20px, 400);
+      padding-top: 3rem;
+      @include text-style(0.875rem, 1.25rem, 400);
     }
   }
 }
