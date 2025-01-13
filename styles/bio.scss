@@ -25,6 +25,10 @@
       padding-left: 36px;
       @include text-style(60px, 68px, 700);
     }
+
+    @include desktop {
+      padding-left: 128px;
+    }
   }
 }
 
@@ -36,6 +40,9 @@
     padding: 48px 36px 36px;
   }
 
+  @include desktop {
+    padding: 48px 128px 36px;
+  }
   &__title {
     @include text-style(24px, 32px, 700);
 
@@ -52,6 +59,10 @@
     @include tablet {
       padding: 36px 64px;
     }
+
+    @include desktop {
+      padding: 36px 96px;
+    }
   }
 
   &__quote {
@@ -61,6 +72,12 @@
       padding: 0px 64px;
       @include text-style(24px, 32px, 600);
     }
+
+    @include desktop {
+      padding-left: 96px;
+      padding-right: 0%;
+      width: 75%;
+    }
   }
 
   &__quote-source {
@@ -68,8 +85,10 @@
     @include text-style(14px, 22px, 700);
 
     @include tablet {
-      padding: 8px 64px 0px; //change 8px maybe
-      @include text-style(14px, 22px, 700); //change values or remove
+      padding: 16px 64px 0px;
+      @include text-style(14px, 22px, 700);
+    @include desktop {
+      padding-left: 96px;
     }
   }
 
@@ -80,6 +99,10 @@
     @include tablet {
       padding: 48px 64px 36px;
       @include text-style(24px, 32px, 500);
+    }
+
+    @include desktop {
+      padding-left: 96px;
     }
   }
 
@@ -97,6 +120,10 @@
       padding-left: 64px;
       @include text-style(14px, 22px, 400);
     }
+
+    @include desktop {
+      padding-left: 96px;
+    }
   }
 
   &__band-p2 {
@@ -108,6 +135,10 @@
       padding-right: 64px;
       @include text-style(14px, 22px, 400);
     }
+
+    @include desktop {
+      padding-right: 96px;
+    }
   }
 }
 
@@ -117,6 +148,10 @@
 
   @include tablet {
     padding: 48px 36px 36px;
+  }
+
+  @include desktop {
+    padding: 48px 128px 36px;
   }
 
   &__title {
@@ -136,15 +171,6 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
-    // @include desktop {
-    //   @include padding-component(0px, $desktop-padding-sides);
-    //   padding-bottom: $dt-padding-sides;
-
-    //   display: grid;
-    //   grid-template-columns: repeat(3, 1fr);
-    //   gap: 1.5rem;
-    // }
   }
 
   &__card-img {
@@ -172,6 +198,14 @@
   @include tablet {
     padding: 48px 36px 36px;
   }
+
+  @include desktop {
+    padding: 48px 128px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__title {
     color: $bandsite-black;
 
@@ -180,6 +214,10 @@
     @include tablet {
       padding-bottom: 36px;
       @include text-style(36px, 44px, 700);
+    }
+
+    @include desktop {
+      align-self: flex-start;
     }
   }
 
@@ -201,6 +239,11 @@
       gap: 24px; //might change
       padding: 36px 64px 0px;
     }
+
+    @include desktop {
+      padding: 36px 0px 0px;
+      width: 40vw;
+    }
   }
 }
 
@@ -208,6 +251,12 @@
   @include tablet {
     margin-left: 64px;
     margin-right: 64px;
+  }
+
+  @include desktop {
+    width: 40vw;
+    margin-left: 0%;
+    margin-right: 0%;
   }
 }
 
@@ -219,6 +268,11 @@
   @include tablet {
     padding: 0px 64px 32px;
     gap: 24px;
+  }
+
+  @include desktop {
+    padding: 0px 0px 32px;
+    width: 40vw;
   }
 
   &__img {
