@@ -28,6 +28,10 @@ body {
     flex-direction: row;
   }
 
+  @include desktop {
+    padding: 32px 128px; //might change 32px
+  }
+
   &__link {
     padding-bottom: 16px;
 
@@ -94,6 +98,10 @@ body {
 
   @include tablet {
     padding: 48px 36px 48px;
+  }
+
+  @include desktop {
+    padding: 48px 128px 48px;
   }
 
   &__title {
@@ -186,11 +194,33 @@ body {
       display: flex;
       justify-self: flex-end;
     }
+
+    @include desktop {
+      visibility: hidden;
+    }
   }
 
   &__container {
     @include tablet {
       height: 44px;
+    }
+  }
+
+  &__logo-container {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      height: 44px;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    @include desktop {
+      width: 120px;
+      height: 20px;
+      justify-self: flex-end;
     }
   }
 }
